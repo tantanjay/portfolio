@@ -35,7 +35,7 @@
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -242,21 +242,25 @@
 					</div>
 					<div class="row">
 						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="309" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter js-counter js-counter-coffee" data-from="0" data-to="500" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="colorlib-counter-label">Cups of coffee</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="10921" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter js-counter js-counter-code" data-from="0" data-to="100000" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="colorlib-counter-label">Lines of Code</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="356" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Completed Projects</span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="8" data-speed="5000" data-refresh-interval="4"></span>
+							<span class="colorlib-counter-label">Completed Systems</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter js-counter-tools" data-from="0" data-to="100" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Completed Tools</span>
+						</div>
+						<!-- <div class="col-md-3 text-center animate-box">
 							<span class="colorlib-counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="colorlib-counter-label">Happy Clients</span>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -847,5 +851,54 @@
 	<script src="js/main.js"></script>
 
 	</body>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const counterElementTools = document.querySelector('.js-counter-tools');
+			const toValueTools = parseInt(counterElementTools.getAttribute('data-to'));
+
+			setInterval(() => {
+				if (toValueTools <= parseInt(counterElementTools.textContent)) {
+					counterElementTools.textContent = toValueTools + '+';
+				} 
+			}, 100);
+
+			const counterElementCoffee = document.querySelector('.js-counter-coffee');
+			const toValueCoffee = parseInt(counterElementCoffee.getAttribute('data-to'));
+			const valueCoffee = Math.floor(Math.random() * (1000 - 500 + 1)) + 500;
+
+			setInterval(() => {
+				if (toValueCoffee <= parseInt(counterElementCoffee.textContent)) {
+					const interval = setInterval(() => {
+						const value = parseInt(counterElementCoffee.textContent);
+						if (valueCoffee > value) {
+							counterElementCoffee.textContent = value + 100;
+						} else {
+							counterElementCoffee.textContent = valueCoffee;
+							clearInterval(interval)
+						}		
+					}, 100);
+				} 
+			}, 100);
+
+			const counterElementCode = document.querySelector('.js-counter-code');
+			const toValueCode = parseInt(counterElementCode.getAttribute('data-to'));
+			const valueCode = Math.floor(Math.random() * (200000 - 100000 + 1)) + 100000;
+
+			setInterval(() => {
+				if (toValueCode <= parseInt(counterElementCode.textContent)) {
+					const interval = setInterval(() => {
+						const value = parseInt(counterElementCode.textContent);
+						if (valueCode > value) {
+							counterElementCode.textContent = value + 100;
+						} else {
+							counterElementCode.textContent = valueCode;
+							clearInterval(interval)
+						}		
+					}, 50);
+				} 
+			}, 100);
+		});
+	</script>
 </html>
 

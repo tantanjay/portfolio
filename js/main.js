@@ -40,6 +40,12 @@
 	var counter = function() {
 		$('.js-counter').countTo({
 			 formatter: function (value, options) {
+
+		  if (options.random === true && options.value === "") {
+			console.log(options)
+			options.value = options.min;
+		  }		
+
 	      return value.toFixed(options.decimals);
 	    },
 		});
@@ -254,7 +260,7 @@
 				$("#sticky_item").trigger("sticky_kit:detach");
 				$("#sticky_item").trigger("sticky_kit:unstick");
 
-				$("#sticky_item").stick_in_parent();
+				// $("#sticky_item").stick_in_parent();
 			}
 			
 
@@ -264,7 +270,7 @@
 
 		$('.sticky-parent').css('height', h);
 
-		$("#sticky_item").stick_in_parent();
+		// $("#sticky_item").stick_in_parent();
 
 	};
 
