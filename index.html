@@ -9,10 +9,11 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
 
-        gtag('consent', 'default', {
-            'ad_storage': 'denied',  // No personalized ads until consent
-            'analytics_storage': 'denied'  // No analytics cookies until consent
-        });
+        if (localStorage.getItem('cookie-consent') === 'accepted') {
+            updateConsent(true);
+        } else {
+            updateConsent(false);
+        }
 
         gtag('js', new Date());
 
