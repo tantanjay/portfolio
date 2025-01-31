@@ -17,7 +17,9 @@
 
         gtag('js', new Date());
 
-        gtag('config', 'G-2Q94HKN14T');
+        gtag('config', 'G-2Q94HKN14T', {
+            'cookie_flags': 'SameSite=None; Secure'
+        });
 
         function updateConsent(consentGiven) {
             if (consentGiven) {
