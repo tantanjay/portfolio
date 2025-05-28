@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
 
@@ -71,8 +71,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="css/flexslider.css">
-    <!-- Flaticons  -->
-    <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -89,16 +87,15 @@
 
 <body>
     <div id="colorlib-page">
-        <div
-            style="position: fixed; bottom: 10px; right: 10px; color: red; font-weight: bold; padding: 10px; z-index: 1000; background-color: transparent;">
+        <div class="notice">
             Notice: This page is currently under development.
         </div>
         <div class="container-wrap">
             <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar"
-                aria-expanded="false" aria-controls="navbar"><i></i></a>
-            <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+                aria-expanded="false" aria-controls="navbar" aria-label="Menu"><i></i></a>
+            <aside id="colorlib-aside" class="border js-fullheight">
                 <div class="text-center">
-                    <div class="author-img" style="background-image: url(images/about2.jpg);"></div>
+                    <div class="author-img"></div>
                     <h1 id="colorlib-logo"><a href="index.html">Christian Jay Soyosa</a></h1>
                     <span class="position"><a href="#">Software Developer</a> <br>in Philippines</span>
                 </div>
@@ -112,7 +109,6 @@
                             <li><a href="#" data-nav-section="education">Education</a></li>
                             <li><a href="#" data-nav-section="experience">Experience</a></li>
                             <li><a href="#" data-nav-section="work">Work</a></li>
-                            <!-- <li><a href="#" data-nav-section="blog">Blog</a></li> -->
                             <li><a href="#" data-nav-section="contact">Contact</a></li>
                         </ul>
                     </div>
@@ -126,17 +122,16 @@
                             Copyright
                             <script>document.write(new Date().getFullYear());</script> All rights reserved. Template
                             designed by <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                target="_blank">Colorlib</a>
+                                target="_blank" rel="noopener noreferrer">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </span>
-                            <!-- <span>Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></span> <span>Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span> -->
                         </small>
                     </p>
                     <ul>
-                        <li><a href="#"><i class="icon-facebook2"></i></a></li>
-                        <li><a href="#"><i class="icon-twitter2"></i></a></li>
-                        <li><a href="#"><i class="icon-instagram"></i></a></li>
-                        <li><a href="#"><i class="icon-linkedin2"></i></a></li>
+                        <li><a href="#" aria-label="Facebook"><i class="icon-facebook2"></i></a></li>
+                        <li><a href="#" aria-label="Twitter"><i class="icon-twitter2"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><i class="icon-linkedin2"></i></a></li>
                     </ul>
                 </div>
 
@@ -146,7 +141,7 @@
                 <section id="colorlib-hero" class="js-fullheight" data-section="home">
                     <div class="flexslider js-fullheight">
                         <ul class="slides">
-                            <li style="background-image: url(images/img_bg_1.jpg);">
+                            <li class="imgbg1">
                                 <div class="overlay"></div>
                                 <div class="container-fluid">
                                     <div class="row">
@@ -155,15 +150,13 @@
                                             <div class="slider-text-inner js-fullheight">
                                                 <div class="desc">
                                                     <h1>Hi! <br>I'm Christian</h1>
-                                                    <!-- <h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-                                                    <p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p> -->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li style="background-image: url(images/img_bg_22.jpg);">
+                            <li class="imgbg22">
                                 <div class="overlay"></div>
                                 <div class="container-fluid">
                                     <div class="row">
@@ -172,8 +165,6 @@
                                             <div class="slider-text-inner">
                                                 <div class="desc">
                                                     <h1>I am <br>a Software <br>Developer</h1>
-                                                    <!-- <h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-                                                    <p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -302,8 +293,7 @@
                     </div>
                 </section>
 
-                <div id="colorlib-counter" class="colorlib-counters"
-                    style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+                <div id="colorlib-counter" class="colorlib-counters coverbg1" data-stellar-background-ratio="0.5">
                     <div class="overlay"></div>
                     <div class="colorlib-narrow-content">
                         <div class="row">
@@ -329,10 +319,6 @@
                                     data-speed="5000" data-refresh-interval="50"></span>
                                 <span class="colorlib-counter-label">Completed Tools</span>
                             </div>
-                            <!-- <div class="col-md-3 text-center animate-box">
-                                <span class="colorlib-counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50"></span>
-                                <span class="colorlib-counter-label">Happy Clients</span>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -360,8 +346,8 @@
                                     <h3>Backend <small class="larger-small">(Spring Boot, Spring Framework, Java
                                             EE)</small></h3>
                                     <div class="progress">
-                                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="9.0"
-                                            aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <div class="progress-bar color-1 w90p" role="progressbar" aria-valuenow="9.0"
+                                            aria-valuemin="0" aria-valuemax="100" aria-label="Backend">
                                             <span>9.0</span>
                                         </div>
                                     </div>
@@ -371,81 +357,64 @@
                                 <div class="progress-wrap">
                                     <h3>Database <small class="larger-small">(MySQL, PostgreSQL, SQLite)</small></h3>
                                     <div class="progress">
-                                        <div class="progress-bar color-2" role="progressbar" aria-valuenow="9.0"
-                                            aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                        <div class="progress-bar color-2 w90p" role="progressbar" aria-valuenow="9.0"
+                                            aria-valuemin="0" aria-valuemax="100" aria-label="Database"">
                                             <span>9.0</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="progress-wrap">
-                                    <h3>Windows Desktop <small class="larger-small">(C#, VB.NET)</small></h3>
-                                    <div class="progress">
-                                        <div class="progress-bar color-3" role="progressbar" aria-valuenow="9.0"
-                                            aria-valuemin="0" aria-valuemax="100" style="width:90%">
-                                            <span>9.0</span>
+                            <div class=" col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                            <div class="progress-wrap">
+                                                <h3>Windows Desktop <small class="larger-small">(C#, VB.NET)</small>
+                                                </h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar color-3 w90p" role="progressbar"
+                                                        aria-valuenow="9.0" aria-valuemin="0" aria-valuemax="100"
+                                                        aria-label="Windows Desktop">
+                                                        <span>9.0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                                            <div class="progress-wrap">
+                                                <h3>Android <small class="larger-small">(Java, Kotlin)</small></h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar color-4 w80p" role="progressbar"
+                                                        aria-valuenow="8.0" aria-valuemin="0" aria-valuemax="100"
+                                                        aria-label="Android">
+                                                        <span>8.0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                            <div class="progress-wrap">
+                                                <h3>Web UI <small class="larger-small">(React, TypeScript)</small></h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar color-5 w75p" role="progressbar"
+                                                        aria-valuenow="7.5" aria-valuemin="0" aria-valuemax="100"
+                                                        aria-label="Web UI">
+                                                        <span>7.5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                                            <div class="progress-wrap">
+                                                <h3>Web3 <small class="larger-small">(Node.js)</small></h3>
+                                                <div class="progress">
+                                                    <div class="progress-bar color-6 w50p" role="progressbar"
+                                                        aria-valuenow="5.0" aria-valuemin="0" aria-valuemax="100"
+                                                        aria-label="Web3">
+                                                        <span>5.0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="progress-wrap">
-                                    <h3>Android <small class="larger-small">(Java, Kotlin)</small></h3>
-                                    <div class="progress">
-                                        <div class="progress-bar color-4" role="progressbar" aria-valuenow="8.0"
-                                            aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                                            <span>8.0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="progress-wrap">
-                                    <h3>Web UI <small class="larger-small">(React, TypeScript)</small></h3>
-                                    <div class="progress">
-                                        <div class="progress-bar color-5" role="progressbar" aria-valuenow="7.5"
-                                            aria-valuemin="0" aria-valuemax="100" style="width:75%">
-                                            <span>7.5</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="progress-wrap">
-                                    <h3>Web3 <small class="larger-small">(Node.js)</small></h3>
-                                    <div class="progress">
-                                        <div class="progress-bar color-6" role="progressbar" aria-valuenow="5.0"
-                                            aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                                            <span>5.0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="progress-wrap">
-                                    <h3>JS (Vanilla, jQuery)</h3>
-                                    <div class="progress">
-                                        <div class="progress-bar color-7" role="progressbar" aria-valuenow="7.0"
-                                        aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        <span>7.0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="progress-wrap">
-                                    <h3>CSS (Bootstrap)</h3>
-                                    <div class="progress">
-                                        <div class="progress-bar color-8" role="progressbar" aria-valuenow="7.0"
-                                        aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                        <span>7.0</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
                 </section>
 
                 <section class="colorlib-education" data-section="education">
@@ -460,9 +429,9 @@
                         <div class="row">
                             <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                 <div class="fancy-collapse-panel">
-                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel-group" id="accordion">
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingOne">
+                                            <div class="panel-heading" id="headingOne">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion"
                                                         href="#collapseOne" aria-expanded="true"
@@ -484,7 +453,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                            <div class="panel-heading" id="headingTwo">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                                         href="#collapseTwo" aria-expanded="false"
@@ -502,41 +471,13 @@
                                                             JavaScript, JQuery), PostgreSQL</li>
                                                         <li>Data Center. LAC, Pawing Palo, Leyte</li>
                                                         <li>2007-2009</li>
-                                                        <li style="display: none;">Jun 01, 2009 - Mar 31, 2010</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingThree">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Diploma in Information Technology
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                                </div>
-                                            </div>
-                                        </div>
 
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingFour">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Diploma in Information Technology
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                                <div class="panel-body">
-                                                    <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                                </div>
-                                            </div>
-                                        </div> -->
-
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingFive">
+                                            <div class="panel-heading" id="headingFive">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion"
                                                         href="#collapseFive" aria-expanded="false"
@@ -583,7 +524,7 @@
                                             </div>
 
                                             <div class="timeline-label">
-                                                <h2><a href="#" onclick="return false;">Software Developer at FPOSI</a>
+                                                <h2><a href="#">Software Developer at FPOSI</a>
                                                     <span>2023-Present</span>
                                                 </h2>
                                                 <p>In my current role, I have been assigned to handle tasks for the
@@ -604,7 +545,7 @@
                                                 <i class="icon-pen2"></i>
                                             </div>
                                             <div class="timeline-label">
-                                                <h2><a href="#" onclick="return false;">Software Developer at IDCSI</a>
+                                                <h2><a href="#">Software Developer at IDCSI</a>
                                                     <span>2011-2023</span>
                                                 </h2>
                                                 <p>Throughout my career, I have gained extensive experience in software
@@ -660,18 +601,6 @@
                                         </div>
                                     </article>
 
-                                    <!-- <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                                       <div class="timeline-entry-inner">
-                                          <div class="timeline-icon color-5">
-                                             <i class="icon-pen2"></i>
-                                          </div>
-                                          <div class="timeline-label">
-                                           <h2><a href="#">UI/UX Designer at Envato</a> <span>2017-2018</span></h2>
-                                             <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                                          </div>
-                                       </div>
-                                    </article> -->
-
                                     <article class="timeline-entry begin animate-box"
                                         data-animate-effect="fadeInBottom">
                                         <div class="timeline-entry-inner">
@@ -694,147 +623,13 @@
                                 <h2 class="colorlib-heading animate-box">Recent Work</h2>
                             </div>
                         </div>
-                        <!-- <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                            <div class="col-md-12">
-                                <p class="work-menu"><span><a href="#" class="active">Graphic Design</a></span> <span><a href="#">Web Design</a></span> <span><a href="#">Software</a></span> <span><a href="#">Apps</a></span></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="project" style="background-image: url(images/CONNECT.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Freight Document Processing Platform</a></h3>
-                                            <span>An advanced system for automating the processing of freight-related documents, such as bills of lading and shipping manifests. Utilizing artificial intelligence, the system enhances accuracy and efficiency by intelligently analyzing and interpreting document content, streamlining operations and reducing manual input.</span>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="project" style="background-image: url(images/ITAX.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Property Tax Assessment and Management System</a></h3>
-                                            <span>A comprehensive solution for assessing, calculating, and managing property taxes, including valuation, billing, and collection processes, designed to enhance accuracy and streamline property tax administration.</span>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-                                <div class="project" style="background-image: url(images/img-3.jpg);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Business License and Permit Management System</a></h3>
-                                            <span>A streamlined platform for managing the application, issuance, and renewal of business licenses and permits, facilitating compliance with regulatory requirements and improving administrative efficiency.</span>
-                                            <label style="display: none;">DAGAMI BABATNGON CAPOOCAN BARUGO SANISIDRO TABANGO</label>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                                <div class="project" style="background-image: url(images/img-4.jpg);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Digital Signature Authentication System</a></h3>
-                                            <span>An electronic system for securing and validating digital signatures on documents, ensuring authenticity, integrity, and non-repudiation in digital transactions and communications.</span>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="project" style="background-image: url(images/img-5.jpg);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Remote Work Monitoring Platform</a></h3>
-                                            <span>A tool for tracking and managing remote work activities, including employee productivity, work hours, and compliance with remote work policies, providing insights and reports to support effective management.</span>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="project" style="background-image: url(images/img-6.jpg);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Document Management Solution</a></h3>
-                                            <span>A robust platform for organizing, storing, and retrieving both digital and physical documents. It features advanced indexing, version control, and search capabilities to streamline document handling and improve efficiency. The system includes functionality for managing physical document storage, allowing users to track and retrieve physical files by their storage location.</span>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="project" style="background-image: url(images/img-1.jpg);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Vaccination Records Management System</a></h3>
-                                            <span>A system for managing and tracking vaccination records, including administration, scheduling, and compliance monitoring, aimed at improving public health and ensuring accurate record-keeping.</span>
-                                            <label style="display: none;">ABUYOG BARUGO KANANGGA MAHAPLAG PALOMPON TOLOSA TANAUAN ISABEL ALANG-ALANG BURAUEN VILLABA</label>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="project" style="background-image: url(images/img-2.jpg);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3><a href="#">Employee Payroll Management System	</a></h3>
-                                            <span>A comprehensive solution designed to manage and automate payroll processing, including salary calculations, tax deductions, and benefits administration, ensuring accurate and timely payments to employees.</span>
-                                            <p class="icon">
-                                                <span><a href="#"><i class="icon-share3"></i></a></span>
-                                                <span><a href="#"><i class="icon-eye"></i> 100</a></span>
-                                                <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 animate-box">
-                                <p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
-                            </div>
-                        </div> -->
 
                         <div class="row">
                             <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                 <div class="fancy-collapse-panel">
-                                    <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                                    <div class="panel-group" id="accordion1">
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingOne1">
+                                            <div class="panel-heading" id="headingOne1">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion1"
                                                         href="#collapseOne1" aria-expanded="true"
@@ -893,22 +688,6 @@
                                                                     insights into system performance and document
                                                                     processing status.
                                                                 </li>
-                                                                <!-- <li>
-                                                                    <strong>User Interface and Backend</strong>
-                                                                    <ul>
-                                                                        <li>Developed the user interface and APIs for configuring client settings, providing admin users the ability to define document types, dynamically add fields with attributes such as valid length, allowed values, etc., and integrate custom validations using JavaScript.</li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <strong>Backend</strong>
-                                                                    <ul>
-                                                                        <li>Created database entities using Hibernate to support efficient data storage and retrieval.</li>
-                                                                        <li>Developed APIs for mobile document capture and integration with AI tools for data extraction.</li>
-                                                                        <li>Built APIs for a data verification interface, with features for requesting and locking documents for individual operators.</li>
-                                                                        <li>Created APIs for dashboard features enabling real-time data monitoring and downloadable reports.</li>
-                                                                        <li>Developed APIs for user management, including features for adding, editing, deleting users, and assigning roles.</li>
-                                                                    </ul>
-                                                                </li> -->
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -916,7 +695,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingTwo2">
+                                            <div class="panel-heading" id="headingTwo2">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse"
                                                         data-parent="#accordion1" href="#collapseTwo2"
@@ -978,28 +757,6 @@
                                                                     receipt images and validating hard copy tax
                                                                     declarations.
                                                                 </li>
-                                                                <!-- <li>
-                                                                    <strong>User Interface and Backend</strong>
-                                                                    <ul>
-                                                                        <li>Developed the user interface and APIs for processing payments for properties, generating receipts for both actual and posted payments.</li>
-                                                                        <li>Built the user interface and APIs for managing property transactions, including reassessment, ownership transfer, property consolidation, and subdivision.</li>
-                                                                        <li>Created the user interface and APIs for assigning booklets to collectors.</li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <strong>Backend</strong>
-                                                                    <ul>
-                                                                        <li>Designed the database architecture for optimal performance and scalability.</li>
-                                                                        <li>Developed the model and service layers for managing profiles, properties, appraisals, assessments, payments, and system configurations (e.g., payment, property, system settings).</li>
-                                                                        <li>Created a repository for transmitting data from individual LGUs to the main server at the provincial level for centralized management and processing.</li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <strong>Mobile</strong>
-                                                                    <ul>
-                                                                        <li>Developed a mobile application in Kotlin for capturing receipt images and validating hard copy tax declarations.</li>
-                                                                    </ul>
-                                                                </li> -->
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -1007,7 +764,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingThree3">
+                                            <div class="panel-heading" id="headingThree3">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse"
                                                         data-parent="#accordion1" href="#collapseThree3"
@@ -1064,10 +821,6 @@
                                                                     Integrated online payment processing with LandBank
                                                                     and UnionBank for seamless transaction handling.
                                                                 </li>
-                                                                <!-- <li>Designed the database architecture.</li>
-                                                                <li>Developed a web application covering all functionalities, including application creation, assessment processes, endorsement, and permit issuance.</li>
-                                                                <li>Built a desktop application that integrates with the web platform for payment processing.</li>
-                                                                <li>Created a desktop tool for importing data, including applications from previous years as well as setting up fee rate configurations.</li> -->
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -1075,7 +828,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingFour4">
+                                            <div class="panel-heading" id="headingFour4">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse"
                                                         data-parent="#accordion1" href="#collapseFour4"
@@ -1115,7 +868,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingFive5">
+                                            <div class="panel-heading" id="headingFive5">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse"
                                                         data-parent="#accordion1" href="#collapseFive5"
@@ -1158,7 +911,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingSix6">
+                                            <div class="panel-heading" id="headingSix6">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse"
                                                         data-parent="#accordion1" href="#collapseSix6"
@@ -1204,7 +957,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingSeven7">
+                                            <div class="panel-heading" id="headingSeven7">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse"
                                                         data-parent="#accordion1" href="#collapseSeven7"
@@ -1253,12 +1006,6 @@
                                                                     automated vaccination certificate printing and data
                                                                     transmission to the provincial repository.
                                                                 </li>
-                                                                <!-- <li>Developed a mobile application for managing vaccination records, including assessments, vital information, and the status of each individual throughout the vaccination stages.</li>
-                                                                <li>Developed reporting tools for internal use and for generating reports required by national health agencies.</li>
-                                                                <li>Created tools for importing vaccination data into the system.</li>
-                                                                <li>Implemented visibility features for patients to track their status in the vaccination process, such as Pre-Vaccination, Vaccination, and Post-Vaccination stages.</li>
-                                                                <li>Implemented text blasting functionality to notify vaccinees of their scheduled appointments.</li>
-                                                                <li>Automated the printing of vaccination certificates for vaccinated individuals and transmitted data to the repository for tracking at the provincial level.</li> -->
                                                             </ul>
                                                         </li>
                                                     </ul>
@@ -1266,7 +1013,7 @@
                                             </div>
                                         </div>
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingEight8">
+                                            <div class="panel-heading" id="headingEight8">
                                                 <h4 class="panel-title">
                                                     <a class="collapsed" data-toggle="collapse"
                                                         data-parent="#accordion1" href="#collapseEight8"
@@ -1315,136 +1062,41 @@
                     </div>
                 </section>
 
-                <!--<section class="colorlib-blog" data-section="blog">
-                    <div class="colorlib-narrow-content">
-                        <div class="row">
-                            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                                <span class="heading-meta">Read</span>
-                                <h2 class="colorlib-heading">Recent Blog</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="blog-entry">
-                                    <a href="blog.html" class="blog-img"><img src="images/blog-1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-                                    <div class="desc">
-                                        <span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
-                                        <h3><a href="blog.html">Renovating National Gallery</a></h3>
-                                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-                                <div class="blog-entry">
-                                    <a href="blog.html" class="blog-img"><img src="images/blog-2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-                                    <div class="desc">
-                                        <span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
-                                        <h3><a href="blog.html">Wordpress for a Beginner</a></h3>
-                                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="blog-entry">
-                                    <a href="blog.html" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-                                    <div class="desc">
-                                        <span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
-                                        <h3><a href="blog.html">Make website from scratch</a></h3>
-                                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 animate-box">
-                                <p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
-                            </div>
-                        </div>
-                    </div>
-                </section>-->
-
                 <section class="colorlib-contact" data-section="contact" id="contactPart">
                     <div class="colorlib-narrow-content">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 col-md-pull-3">
-                                <!-- <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft"> -->
                                 <span class="heading-meta">Get in Touch</span>
                                 <h2 class="colorlib-heading">Contact</h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-5">
-                                <!--<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                                    <div class="colorlib-icon">
-                                        <i class="icon-mail"></i>
-                                    </div>
-                                    <div class="colorlib-text">
-                                        <p><a href="mailto:christianjay.soyosa@gmail.com">christianjay.soyosa@gmail.com</a></p>
-                                    </div>
-                                </div>
-                                <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                                    <div class="colorlib-icon">
-                                        <i class="icon-map"></i>
-                                    </div>
-                                    <div class="colorlib-text">
-                                        <p>198 West 21th Street, Suite 721 New York NY 10016</p>
-                                    </div>
-                                </div>
-                                <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-                                    <div class="colorlib-icon">
-                                        <i class="icon-phone"></i>
-                                    </div>
-                                    <div class="colorlib-text">
-                                        <p><a href="tel:+639164872148">+63 916 487 2148</a></p>
-                                    </div>
-                                </div>-->
-
                                 <div class="colorlib-feature colorlib-feature-sm">
-                                    <!-- <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft"> -->
                                     <div class="colorlib-icon">
                                         <i class="icon-linkedin22"></i>
                                     </div>
                                     <div class="colorlib-text">
                                         <p><a href="https://www.linkedin.com/in/christian-jay-soyosa-78a662239/"
-                                                target="_blank">LinkedIn Profile</a></p>
+                                                target="_blank" aria-label="LinkedIn Profile"
+                                                rel="noopener noreferrer">LinkedIn Profile</a></p>
                                     </div>
                                 </div>
 
                                 <div class="colorlib-feature colorlib-feature-sm">
-                                    <!-- <div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft"> -->
                                     <div class="colorlib-icon">
                                         <i class="icon-briefcase3"></i>
                                     </div>
                                     <div class="colorlib-text">
                                         <p><a href="https://ph.jobstreet.com/profile/christianjay-soyosa-sTKRN4rKnB"
-                                                target="_blank">Jobstreet Profile</a></p>
+                                                target="_blank" aria-label="Jobstreet Profile"
+                                                rel="noopener noreferrer">Jobstreet Profile</a></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-7 col-md-push-1">
                                 <div class="row">
-                                    <!--<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-                                        <form action="">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Name">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Email">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Subject">
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
-                                            </div>
-                                        </form>
-                                    </div>-->
-
                                     <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                                    <!-- <div class="elfsight-app-5caa7381-9cb4-42fd-9de8-34b63e1da4f2 col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-elfsight-app-lazy data-animate-effect="fadeInRight"></div> -->
                                     <div class="elfsight-app-5caa7381-9cb4-42fd-9de8-34b63e1da4f2 col-md-10 col-md-offset-1 col-md-pull-1"
                                         data-elfsight-app-lazy></div>
                                 </div>

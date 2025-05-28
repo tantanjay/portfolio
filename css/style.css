@@ -558,6 +558,7 @@ body.offcanvas .colorlib-nav-toggle {
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
+  background-image: url(../images/about2.jpg);
 }
 
 .colorlib-heading {
@@ -2138,4 +2139,43 @@ body.offcanvas .colorlib-nav-toggle {
 
 .cookie-consent-button:focus {
   outline: none;
+}
+
+.notice {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.imgbg1 {
+  background-image: url(../images/img_bg_1.jpg);
+}
+
+.imgbg22 {
+  background-image: url(../images/img_bg_22.jpg);
+}
+
+.coverbg1 {
+  background-image: url(../images/cover_bg_1.jpg);
+}
+
+.w50p {
+  width: 50%
+}
+
+.w75p {
+  width: 75%
+}
+
+.w80p {
+  width: 80%
+}
+
+.w90p {
+  width: 90%
 }
