@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-gray-700 bg-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal text-black;
+  }
+}
