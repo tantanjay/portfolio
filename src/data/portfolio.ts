@@ -65,7 +65,7 @@ export const skills = {
             subtitle: "(Professional-Level)",
             items: [
                 "Frontend: React, TypeScript",
-                "Android: Java, Kotlin"
+                "Android: Java, Kotlin, Expo"
             ]
         },
         {
@@ -129,6 +129,24 @@ export const experience = [
 ];
 
 export const projects = [
+    {
+        "title": "WealthSnap — Your Financial Mirror",
+        "category": "FinTech / Mobile Development",
+        "description": "A fully deployed, privacy-first personal finance ecosystem. Features a zero-knowledge architecture and custom algorithmic engines to provide high-resolution insights into net worth and spending behavior across Stocks, Funds (MP2), and Crypto.",
+        "roles": "Solo Developer",
+        "teamSize": "1 member",
+        "deployment": "Production (Google Play Store)",
+        "stack": "React Native, Expo (New Architecture), SQLite, Google Gemini API (LLM Integration)",
+        "keyPoints": [
+            "Architected a 'Local-First' zero-knowledge system where all financial data and logic reside strictly on-device, ensuring absolute privacy without a centralized server.",
+            "Engineered a 'Safe to Spend' algorithm that dynamically calculates discretionary income by deducting upcoming bills and a 90-day 'Life Burnrate' from liquid balances.",
+            "Developed a multi-asset investment engine supporting Stocks, MP2/Funds, and Crypto (USD/Foreign support) with automated ledger linking to sync purchases with cash flow.",
+            "Implemented advanced financial visualizations including an Allocation Treemap for portfolio weighting and a monthly 'Pulse' velocity graph to track spending speed against historical averages.",
+            "Built a 'Bring Your Own AI' (BYO-AI) module allowing users to integrate their own Google Gemini API keys for locally-processed receipt scanning and asset price cross-checking.",
+            "Developed a 'Behavioral Impact' engine that translates static purchase prices into long-term 'Burn Rate' volatility, providing real-time alerts on how impulse spending affects daily financial survival (e.g., $900 purchase = +$10/day burn).",
+            "Designed 'Subway Safe' privacy features, including default biometric masking and high-precision math reconciliation via BigNumber.js for cent-perfect accuracy."
+        ]
+    },
     {
         title: "Modern Image Classification Pipeline (Personal Project)",
         category: "AI / ML",
