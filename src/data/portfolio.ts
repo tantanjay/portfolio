@@ -1,22 +1,21 @@
-import { Globe, Monitor, Smartphone, Database, Layers } from 'lucide-react';
+import { Globe, Monitor, Smartphone, Database, Layers, Lightbulb } from 'lucide-react';
 
 export const personalInfo = {
     name: "Christian Jay Soyosa",
-    role: "Software Developer",
+    role: "Lead Software Engineer",
     location: "Philippines",
-    email: "contact@example.com", // Placeholder, need to find if real email exists or use form
     socials: {
         linkedin: "https://www.linkedin.com/in/christian-jay-soyosa-78a662239/",
         jobstreet: "https://ph.jobstreet.com/profile/christianjay-soyosa-sTKRN4rKnB",
-        github: "https://github.com/tantanjay", // Infereed
+        github: "https://github.com/tantanjay",
     }
 };
 
 export const about = {
     heading: "Who Am I?",
     text: [
-        "I'm Christian Jay Soyosa, a results-driven Software Developer with a passion for architecting and engineering robust, scalable solutions. My experience spans the full development lifecycle, from creating dynamic web and Android applications to designing complex databases and powerful desktop tools.",
-        "I am committed to continuous learning and staying at the forefront of technology. By actively exploring emerging trends, new tools, and modern methodologies, I ensure my work is not only effective but also forward-thinking."
+        "I'm Christian Jay Soyosa, a Lead Software Engineer dedicated to architecting and engineering robust, scalable systems. My expertise spans the full software lifecycle—from designing high-integrity backend architectures to delivering production-ready web, mobile, and desktop applications.",
+        "I am committed to staying at the forefront of technology by integrating modern methodologies and emerging tools. This proactive approach ensures my solutions are not only effective for today’s challenges but also future-proof."
     ],
     services: [
         { title: "Web", icon: Globe, color: "blue" },
@@ -28,24 +27,21 @@ export const about = {
 
 export const services = [
     {
-        title: "Lead Developer",
-        icon: LightbulbIcon, // custom component needed or map string
-        description: "I architect and guide development projects from concept to completion, leading teams to deliver high-quality, maintainable code."
+        title: "Engineering Leadership",
+        icon: Lightbulb,
+        description: "Architecting and guiding projects from concept to deployment, ensuring teams deliver high-quality, maintainable, and enterprise-grade code."
     },
     {
-        title: "Full Stack Developer",
+        title: "Full Stack Engineering",
         icon: Layers,
-        description: "Engineering end-to-end solutions, from designing scalable server-side logic APIs to building intuitive user interfaces."
+        description: "Engineering end-to-end solutions, from designing scalable server-side logic and APIs to building intuitive, responsive user interfaces."
     },
     {
-        title: "Database Design",
+        title: "Database Architecture",
         icon: Database,
-        description: "Designing and optimizing robust database architectures, ensuring data integrity for high-performance applications."
+        description: "Designing and optimizing robust database schemas to ensure data integrity and high performance for data-intensive applications."
     }
 ];
-
-// Helper for icons mapping if needed, or import directly
-import { Lightbulb as LightbulbIcon } from 'lucide-react';
 
 export const skills = {
     specialty: "My Specialty",
@@ -65,14 +61,15 @@ export const skills = {
             subtitle: "(Professional-Level)",
             items: [
                 "Frontend: React, TypeScript",
-                "Android: Java, Kotlin, Expo"
+                "Mobile (Native): Java, Kotlin (Android SDK)"
             ]
         },
         {
-            title: "Exploring",
+            title: "Research & Prototyping",
             subtitle: "(Personal & Development)",
             items: [
                 "AI / ML: Python, TensorFlow",
+                "Cross-Platform: Expo, React Native",
                 "Analytics: R",
                 "Web3: Web3.js"
             ]
@@ -85,206 +82,207 @@ export const education = [
         title: "Short Course in Mobile Application Development",
         institution: "Asian College of Science and Technology",
         year: "2014",
-        details: ["Language: Java, CodeIgniter", "Aurora Blvd, Project 3, Quezon City"]
+        details: ["Technologies: Java, PHP (CodeIgniter)", "Quezon City, Philippines"]
     },
     {
         title: "Vocational Training in Software Development",
         institution: "ICOTP on Information Communication Technology",
         year: "2007-2009",
-        details: ["Language: C, C++, VB6, Java Web, PostgreSQL", "Data Center. LAC, Pawing Palo, Leyte"]
+        details: ["Technologies: C, C++, VB6, Java, PostgreSQL", "Pawing Palo, Leyte"]
     },
     {
-        title: "High School Secondary Education",
+        title: "Secondary Education",
         institution: "Tanauan National High School",
         year: "2004-2008",
-        details: ["Brgy. Canramos Tanauan, Leyte"]
+        details: ["Tanauan, Leyte"]
     }
 ];
 
 export const experience = [
     {
-        role: "Software Developer",
+        role: "Lead Developer",
         company: "FPOSI",
         period: "2023-Present",
-        description: "As a key developer for Local Government Unit (LGU) projects in Leyte, I specialize in engineering and implementing customized software solutions that directly address the needs of local government operations."
+        description: "Orchestrating technical strategy and engineering for Local Government Unit (LGU) projects. I specialize in architecting customized solutions that modernize complex governmental operations and data workflows."
     },
     {
-        role: "Lead Software Developer",
+        role: "Lead Developer",
         company: "IDCSI",
-        period: "2011-2023",
-        description: "Promoted to Lead Developer, where I oversaw the full project lifecycle and mentored a team of programmers. Architected and deployed a diverse range of full-stack web applications and robust desktop solutions."
+        period: "2018-2023",
+        description: "Managing the full project lifecycle and mentoring a team of developers. Successfully architected and deployed a diverse portfolio of full-stack web applications and enterprise desktop solutions."
+    },
+    {
+        role: "Senior Developer",
+        company: "IDCSI",
+        period: "2011-2018",
+        description: "Engineered enterprise-level software and took ownership of complex module development. Focused on optimizing database performance and ensuring system reliability through clean code architecture."
     },
     {
         role: "Programming Instructor",
         company: "Flora Ylagan High School",
         period: "2015-2016",
-        description: "Developed and delivered a comprehensive curriculum for Grade 10 students, focusing on C, VB.NET, and MySQL."
+        description: "Designed and delivered a comprehensive Computer Science curriculum for Grade 10 students, focusing on logic, C, VB.NET, and MySQL."
     },
     {
         role: "Programmer",
         company: "Leyte Provincial Capitol",
         period: "2010-2011",
-        description: "Launched my software development career by contributing to the backend of the provincial government's Payroll system."
+        description: "Initiated my professional career by developing the backend logic for the provincial government's payroll and records system."
     }
 ];
 
 export const projects = [
     {
-        "title": "WealthSnap — Your Financial Mirror",
-        "category": "FinTech / Mobile Development",
-        "description": "A fully deployed, privacy-first personal finance ecosystem. Features a zero-knowledge architecture and custom algorithmic engines to provide high-resolution insights into net worth and spending behavior across Stocks, Funds (MP2), and Crypto.",
-        "roles": "Solo Developer",
-        "teamSize": "1 member",
-        "deployment": "Production (Google Play Store)",
-        "stack": "React Native, Expo (New Architecture), SQLite, Google Gemini API (LLM Integration)",
-        "keyPoints": [
-            "Architected a 'Local-First' zero-knowledge system where all financial data and logic reside strictly on-device, ensuring absolute privacy without a centralized server.",
-            "Engineered a 'Safe to Spend' algorithm that dynamically calculates discretionary income by deducting upcoming bills and a 90-day 'Life Burnrate' from liquid balances.",
-            "Developed a multi-asset investment engine supporting Stocks, MP2/Funds, and Crypto (USD/Foreign support) with automated ledger linking to sync purchases with cash flow.",
-            "Implemented advanced financial visualizations including an Allocation Treemap for portfolio weighting and a monthly 'Pulse' velocity graph to track spending speed against historical averages.",
-            "Built a 'Bring Your Own AI' (BYO-AI) module allowing users to integrate their own Google Gemini API keys for locally-processed receipt scanning and asset price cross-checking.",
-            "Developed a 'Behavioral Impact' engine that translates static purchase prices into long-term 'Burn Rate' volatility, providing real-time alerts on how impulse spending affects daily financial survival (e.g., $900 purchase = +$10/day burn).",
-            "Designed 'Subway Safe' privacy features, including default biometric masking and high-precision math reconciliation via BigNumber.js for cent-perfect accuracy."
+        title: "WealthSnap — Your Financial Mirror",
+        category: "FinTech",
+        description: "A fully deployed, privacy-first personal finance ecosystem. Features a zero-knowledge architecture and custom algorithmic engines to provide high-resolution insights into net worth and spending behavior.",
+        roles: "Product Owner & Engineer",
+        teamSize: "Solo Project",
+        deployment: "Production (Google Play Store)",
+        stack: "React Native, Expo (New Architecture), SQLite, Google Gemini API",
+        keyPoints: [
+            "Architected a 'Local-First' zero-knowledge system where all financial logic resides strictly on-device, ensuring absolute privacy.",
+            "Engineered a 'Safe to Spend' algorithm that dynamically calculates discretionary income by factoring in 90-day 'Life Burnrate.'",
+            "Developed a multi-asset investment engine supporting Stocks, MP2, and Crypto with automated ledger synchronization.",
+            "Implemented advanced visualizations including Allocation Treemaps and 'Pulse' velocity graphs for spending analysis.",
+            "Integrated a 'Bring Your Own AI' (BYO-AI) module leveraging Google Gemini for local receipt scanning.",
+            "Designed 'Subway Safe' privacy features, including biometric masking and high-precision math via BigNumber.js."
         ]
     },
     {
-        title: "Modern Image Classification Pipeline (Personal Project)",
+        title: "Modern Image Classification Pipeline",
         category: "AI / ML",
         description: "End-to-end pipeline for training image classification models. Automatically trains deep learning models and produces detailed performance reports.",
-        roles: "AI Developer",
-        teamSize: "1 member",
+        roles: "Lead AI Developer",
+        teamSize: "Solo Project",
         deployment: "Local / Cloud",
-        stack: "Python, TensorFlow, Keras, Pandas, Scikit-learn, Matplotlib, Seaborn, PyYAML",
+        stack: "Python, TensorFlow, Keras, Pandas, Scikit-learn, Matplotlib, Seaborn",
         keyPoints: [
-            "Engineered a robust data loader to automatically read, split, preprocess, and augment thousands of images using techniques like RandAugment.",
+            "Engineered a robust data loader to automatically preprocess and augment thousands of images using RandAugment.",
             "Designed a flexible model builder leveraging transfer learning from EfficientNetV2 with a custom classification head.",
             "Implemented sophisticated training strategies, including 'Gradual Unfreezing' and 'Cosine Decay' learning rate schedulers.",
-            "Built an automated evaluation module that generates an 8-graph training dashboard, confusion matrices, and per-class performance reports."
+            "Built an automated evaluation module that generates a comprehensive training dashboard and confusion matrices."
         ]
     },
     {
         title: "Enterprise Authorization & Identity Server",
         category: "Security",
-        description: "Production-grade identity provider built with Spring Authorization Server. Centralized authentication/authorization (OAuth 2.1, OIDC) for a microservices ecosystem.",
-        roles: "Full Stack Developer",
-        teamSize: "1 member",
+        description: "Production-grade identity provider built with Spring Authorization Server. Centralized authentication and authorization for microservices ecosystems.",
+        roles: "Lead Full Stack Developer",
+        teamSize: "Solo Project",
         deployment: "Clustered, High-Availability (HA) Environment",
-        stack: "Java (Spring Boot), Spring Authorization Server, Spring Security, OAuth 2.1, OIDC, JWT, MySQL, Redis, JDBC, ShedLock, Thymeleaf",
+        stack: "Java (Spring Boot), OAuth 2.1, OIDC, MySQL, Redis, Thymeleaf",
         keyPoints: [
-            "Implemented full OAuth 2.1 and OIDC-compliant server supporting Authorization Code (with PKCE), Client Credentials, and Refresh Token grants.",
+            "Implemented full OAuth 2.1 and OIDC-compliant server supporting Authorization Code (PKCE), Client Credentials, and Refresh Token grants.",
             "Architected a high-performance database layer with read/write splitting using AbstractRoutingDataSource.",
             "Built an automated, cluster-safe JWT key rotation system using JWKSource and ShedLock.",
-            "Integrated a distributed Redis cache for clients and authorizations.",
-            "Co-located the Authorization Server with a Resource Server, building a secure, IP-whitelisted admin GUI.",
-            "Developed advanced token customizers to validate business logic and inject rich user permissions into JWTs."
+            "Integrated a distributed Redis cache for optimized client authorizations and session management."
         ]
     },
     {
-        title: "AI-Powered Document Data Extraction Platform",
-        category: "Full Stack",
-        description: "Advanced system for automating data extraction from documents (bills of lading, invoices, receipts) using AI.",
-        roles: "Lead Developer, Full Stack Developer",
+        title: "AI-Powered Document Extraction Platform",
+        category: "Enterprise",
+        description: "Advanced system for automating data extraction from complex documents (invoices, bills, receipts) using AI.",
+        roles: "Lead Full Stack Developer",
         teamSize: "4 members",
         deployment: "Publicly-Hosted On-Premises",
-        stack: "Java (Spring Boot), React, C# (.NET), Hibernate, MySQL, RabbitMQ, Redis, Traefik, HashiCorp Vault, Consul, JWT, Jackson",
+        stack: "Java (Spring Boot), React, C#, Hibernate, RabbitMQ, Redis, Traefik, Vault",
         keyPoints: [
-            "Architected and implemented a scalable microservices infrastructure, managing Spring Boot instance replication.",
-            "Led the end-to-end backend development, creating RESTful APIs for AI integration and mobile capture.",
-            "Built critical UI modules in React, including the System Configuration panel and a real-time Dashboard.",
-            "Implemented core logic for data verification, user management, and AI output cleansing."
+            "Architected a scalable microservices infrastructure managing Spring Boot instance replication.",
+            "Led backend development, creating RESTful APIs for AI integration and mobile capture.",
+            "Built critical React UI modules including System Configuration and real-time Analytics Dashboards.",
+            "Implemented core logic for data verification and AI output cleansing."
         ]
     },
     {
-        title: "Property Tax Assessment and Management System",
+        title: "Property Tax Management System",
         category: "Government",
-        description: "Comprehensive solution for managing the entire property tax lifecycle (valuation, billing, collection).",
-        roles: "Lead Developer, Full Stack Developer",
+        description: "Comprehensive solution for managing the entire property tax lifecycle including valuation, billing, and collection.",
+        roles: "Lead Full Stack Developer",
         teamSize: "3 members",
         deployment: "Standalone, Distributed per LGU",
-        stack: "Java (Servlet, JSP), Kotlin (Android), MySQL, jQuery, Bootstrap, RESTful Web Services",
+        stack: "Java (Servlet, JSP), Kotlin (Android), MySQL, RESTful Web Services",
         keyPoints: [
-            "Engineered the core database architecture and backend services for managing profiles, properties, appraisals, assessments, and payments.",
-            "Developed key UI and API functionalities for payment processing and complex property transactions.",
-            "Built a central repository for synchronizing data from individual LGU deployments to the provincial server.",
-            "Created a companion Android app in Kotlin for field validation of tax declarations and receipt image capture."
+            "Engineered core database architecture and services for managing appraisals and payment assessments.",
+            "Built a central repository for synchronizing data from individual LGU deployments to provincial servers.",
+            "Created a companion Android app in Kotlin for field validation and tax declaration capture."
         ]
     },
     {
-        title: "Business License and Permit Management System",
+        title: "Business License & Permit System",
         category: "Government",
         description: "Streamlined platform for managing the application, issuance, and renewal of business licenses and permits.",
-        roles: "Lead Developer, Full Stack Developer",
+        roles: "Lead Full Stack Developer",
         teamSize: "2 members",
         deployment: "Standalone, Distributed per LGU",
-        stack: "Java (Servlet, JSP), VB.NET, MySQL, jQuery, Bootstrap",
+        stack: "Java, VB.NET, MySQL, jQuery, Bootstrap",
         keyPoints: [
             "Built the end-to-end web application for the entire permit lifecycle.",
-            "Developed an integrated desktop application in VB.NET for secure payment processing.",
-            "Integrated online payment gateways (LandBank, UnionBank) to facilitate seamless digital transactions.",
-            "Created a desktop tool for importing historical data and configuring fee structures."
+            "Integrated online payment gateways (LandBank, UnionBank) for seamless digital transactions.",
+            "Developed a VB.NET desktop utility for secure, local payment processing and fee configuration."
         ]
     },
     {
-        title: "Digital Signature Authentication System",
+        title: "Digital Signature Authentication",
         category: "Security",
-        description: "An electronic system for securing and validating digital signatures on documents, ensuring authenticity, integrity, and non-repudiation.",
-        roles: "Full Stack Developer",
-        teamSize: "1 member",
+        description: "Electronic system for securing and validating digital signatures, ensuring document authenticity and non-repudiation.",
+        roles: "Lead Full Stack Developer",
+        teamSize: "Solo Project",
         deployment: "Enterprise Self-Hosted",
-        stack: "Java (Servlet, JSP), MySQL, jQuery, Bootstrap, PKCS, iText",
+        stack: "Java, MySQL, PKCS, iText",
         keyPoints: [
-            "Engineered the complete end-to-end system for secure document signing and verification.",
-            "Integrated PKCS standards and the iText library to embed and validate cryptographic signatures within PDF documents.",
-            "Designed the database schema and backend logic to manage user credentials, documents, and audit trails."
+            "Engineered a complete system for secure document signing using PKCS standards.",
+            "Integrated iText library to embed and validate cryptographic signatures within PDF documents.",
+            "Designed secure audit trails and backend logic to manage user credentials and documents."
         ]
     },
     {
         title: "Remote Work Monitoring Platform",
-        category: "Full Stack",
-        description: "A comprehensive tool for tracking and managing remote work activities, providing insights into employee productivity.",
-        roles: "Full Stack Developer",
-        teamSize: "1 member",
+        category: "Enterprise",
+        description: "A comprehensive tool for tracking remote work activities and providing deep insights into productivity.",
+        roles: "Lead Full Stack Developer",
+        teamSize: "Solo Project",
         deployment: "Enterprise Self-Hosted",
-        stack: "Java (Servlet, JSP), VB.NET, MySQL, jQuery, Bootstrap",
+        stack: "Java, VB.NET, MySQL, jQuery",
         keyPoints: [
-            "Architected and built the full-stack web platform for managers to monitor remote employee activity.",
-            "Developed a lightweight VB.NET desktop agent to capture work metrics and securely transmit data.",
-            "Implemented a reporting dashboard to visualize work hours, application usage, and productivity insights."
+            "Architected a full-stack platform for monitoring and managing remote employee activities.",
+            "Developed a lightweight VB.NET desktop agent to capture metrics and securely transmit data.",
+            "Implemented a reporting dashboard to visualize application usage and productivity trends."
         ]
     },
     {
-        title: "Document Management and Tracking System",
-        category: "Full Stack",
-        description: "A platform for organizing, storing, and tracking both digital and physical documents with advanced indexing.",
-        roles: "Full Stack Developer",
-        teamSize: "1 member",
+        title: "Document Tracking System",
+        category: "Government",
+        description: "Platform for organizing and tracking digital and physical documents with advanced indexing.",
+        roles: "Lead Full Stack Developer",
+        teamSize: "2 members",
         deployment: "Standalone, Distributed per LGU",
-        stack: "Java (Servlet, JSP), VB.NET, MySQL, jQuery, Bootstrap",
+        stack: "Java, VB.NET, MySQL, jQuery",
         keyPoints: [
-            "Developed a dual-purpose system to manage both digital assets and the physical storage locations.",
-            "Built the web interface with advanced search, version control, and document lifecycle tracking.",
-            "Created a VB.NET desktop utility for bulk scanning and metadata tagging of physical documents."
+            "Developed a dual-purpose system managing both digital assets and physical storage locations.",
+            "Built a web interface with advanced search, version control, and lifecycle tracking.",
+            "Created a VB.NET desktop utility for bulk scanning and automated metadata tagging."
         ]
     },
     {
-        title: "Vaccination Records Management System",
+        title: "Vaccination Records System",
         category: "Healthcare",
-        description: "System for managing and tracking vaccination records, including administration, scheduling, and compliance monitoring.",
-        roles: "Team Lead, Mobile Developer",
+        description: "System for managing vaccination records, administration scheduling, and compliance monitoring.",
+        roles: "Team Lead & Mobile Developer",
         teamSize: "3 members",
         deployment: "Standalone, Distributed per LGU",
         stack: "Java (Android), VB.NET, MySQL",
         keyPoints: [
-            "Led the Android app development for field data entry and tracking.",
-            "Implemented automated reports and SMS notifications for vaccination schedules.",
-            "Ensured data synchronization between mobile units and central servers."
+            "Led Android app development for field data entry and vaccination tracking.",
+            "Implemented automated SMS notification engines for vaccination schedules.",
+            "Ensured robust data synchronization between mobile units and central LGU servers."
         ]
     }
 ];
 
 export const stats = [
-    { label: "Cups of coffee", value: 500, suffix: "+" },
+    { label: "Cups of Coffee", value: 500, suffix: "+" },
     { label: "Lines of Code", value: 100000, suffix: "+" },
-    { label: "Completed Systems", value: 8, suffix: "" },
-    { label: "Completed Tools", value: 100, suffix: "+" }
+    { label: "Enterprise Systems", value: 8, suffix: "" },
+    { label: "Tools Developed", value: 100, suffix: "+" }
 ];
