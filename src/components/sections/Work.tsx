@@ -6,9 +6,10 @@ import { useState } from 'react';
 const categoryColors: Record<string, string> = {
     'AI / ML': 'bg-blue-100 text-blue-800',
     'Security': 'bg-red-100 text-red-800',
-    'Full Stack': 'bg-yellow-100 text-yellow-800',
+    'Enterprise': 'bg-yellow-100 text-yellow-800',
     'Government': 'bg-purple-100 text-purple-800',
     'Healthcare': 'bg-green-100 text-green-800',
+    'FinTech': 'bg-teal-100 text-teal-800',
 };
 
 export default function Work() {
@@ -29,7 +30,7 @@ export default function Work() {
                             My Work
                         </span>
                         <h2 className="text-3xl font-bold font-serif mb-6 uppercase tracking-[3px]">
-                            Recent Projects
+                            Featured Projects
                         </h2>
                     </motion.div>
                 </div>

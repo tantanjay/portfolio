@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { personalInfo } from '../../data/portfolio';
-import { Mail, Linkedin, Briefcase } from 'lucide-react';
+import { Linkedin, Briefcase, GitBranch } from 'lucide-react';
 
 export default function Contact() {
     return (
@@ -53,18 +53,19 @@ export default function Contact() {
                         <span className="text-sm text-gray-500">View Profile</span>
                     </motion.a>
 
-                    <motion.div
+                    <motion.a
+                        href={personalInfo.socials.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ y: -5 }}
-                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-sm w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-red-500 transition-all"
+                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-sm w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-gray-500 transition-all"
                     >
-                        <div className="mb-4 text-gray-400 group-hover:text-red-500 transition-colors">
-                            <Mail size={40} />
+                        <div className="mb-4 text-gray-400 group-hover:text-gray-900 transition-colors">
+                            <GitBranch size={40} />
                         </div>
-                        <h3 className="font-serif font-bold text-lg mb-2">Email</h3>
-                        <a href={`mailto:${personalInfo.email}`} className="text-sm text-gray-500 hover:text-red-500 transition-colors">
-                            {personalInfo.email}
-                        </a>
-                    </motion.div>
+                        <h3 className="font-serif font-bold text-lg mb-2">GitHub</h3>
+                        <span className="text-sm text-gray-500">Check my activity</span>
+                    </motion.a>
 
                 </div>
 
