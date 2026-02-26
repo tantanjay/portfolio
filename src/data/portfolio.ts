@@ -150,6 +150,23 @@ export const projects = [
         ]
     },
     {
+        title: "Laniakea — Personal Sentiment Trajectory Diary",
+        category: "Experimental",
+        description: "An on-device, privacy-first personal diary framework for longitudinal sentiment tracking. Uses high-dimensional embeddings to map daily writing into semantic trajectories, allowing the user to observe patterns in mood and behavior without cloud storage or invasive tracking.",
+        roles: "Solo Developer / Researcher",
+        teamSize: "Solo Project",
+        deployment: "Personal / Local-Only",
+        stack: "Kotlin (Android), SQLite + sqlite-vec, ONNX Runtime Mobile, UMAP/PCA, Lightweight Transformer Embeddings",
+        keyPoints: [
+            "Transforms daily diary entries into high-dimensional embeddings (Gemma 3-270M / Qwen3-0.6B) with ephemeral memory handling.",
+            "Applies differential privacy (Laplacian noise) to all persisted vectors to prevent inversion of raw text.",
+            "Computes angular semantic velocity and acceleration to track high-dimensional mood trajectories.",
+            "Uses K-Nearest Neighbors and optional manifold projection (UMAP/PCA) to find symmetric patterns in the user's historical entries.",
+            "Implements defensive UI to mitigate self-fulfilling prophecies: only non-deterministic pattern observation is surfaced.",
+            "Designed as a long-term personal experiment with strict local-first storage and optional visualization of semantic drift."
+        ]
+    },
+    {
         title: "Modern Image Classification Pipeline",
         category: "AI / ML",
         description: "End-to-end pipeline for training image classification models. Automatically trains deep learning models and produces detailed performance reports.",
