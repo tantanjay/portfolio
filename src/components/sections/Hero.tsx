@@ -51,7 +51,7 @@ export default function Hero() {
                         Software Developer | Architect | Tech Enthusiast
                     </p>
                     <a
-                        href="/public/images/ITAX.png" // Placeholder CV download or link
+                        href="#"
                         download
                         className="btn inline-block px-6 py-3 border border-black text-black font-medium uppercase tracking-widest hover:bg-black hover:text-white transition-colors whitespace-nowrap"
                     >
