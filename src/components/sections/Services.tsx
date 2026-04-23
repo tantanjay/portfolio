@@ -10,7 +10,7 @@ const serviceColors = [
 
 export default function Services() {
     return (
-        <section id="services" className="py-20 bg-white">
+        <section id="skills" className="py-20 bg-white">
             <div className="container mx-auto px-6 md:px-12">
 
                 {/* Header */}
@@ -22,10 +22,10 @@ export default function Services() {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="block text-xs font-bold text-gray-400 uppercase tracking-[3px] mb-2">
-                            What I do?
+                            My Specialty
                         </span>
                         <h2 className="text-3xl font-bold font-serif mb-6 uppercase tracking-[3px]">
-                            Here are some of my expertise
+                            My Skills & Expertise
                         </h2>
                     </motion.div>
                 </div>
@@ -47,8 +47,18 @@ export default function Services() {
                                 <div className={`mb-6 inline-block p-4 rounded-full bg-gray-50 group-hover:bg-gray-100 transition-colors ${colorClass.split(' ')[1]}`}>
                                     <Icon size={40} />
                                 </div>
-                                <h3 className="text-xl font-medium font-serif mb-4">{service.title}</h3>
-                                <p className="text-gray-600 leading-relaxed font-sans">{service.description}</p>
+                                <h3 className="text-xl font-bold font-serif mb-1">{service.title}</h3>
+                                <span className="block text-xs uppercase tracking-wider text-gray-400 mb-4">{service.subtitle}</span>
+                                <p className="text-gray-600 leading-relaxed font-sans mb-6">{service.description}</p>
+
+                                <ul className="space-y-3 text-left border-t border-gray-100 pt-6">
+                                    {service.items.map((item, i) => (
+                                        <li key={i} className="flex items-start text-gray-700 font-sans text-sm">
+                                            <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mt-1.5 mr-3 shrink-0"></span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
                             </motion.div>
                         );
                     })}

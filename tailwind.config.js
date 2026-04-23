@@ -8,10 +8,10 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['"Quicksand"', 'sans-serif'],
-                serif: ['"Playfair Display"', 'serif'],
+                serif: ['"Outfit"', 'sans-serif'],
             },
             colors: {
-                primary: "#2c98f0", // Blue
+                primary: "#2c98f0", // Blue 
                 secondary: "#f9bf3f", // Yellow
                 accent: {
                     blue: "#2c98f0",
