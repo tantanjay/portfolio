@@ -1,8 +1,8 @@
-import { Database, Lightbulb, Sparkle } from 'lucide-react';
+import { Database, Lightbulb, Sparkle, Settings } from 'lucide-react';
 
 export const personalInfo = {
     name: "Christian Jay Soyosa",
-    role: "Lead Software Engineer",
+    role: "Lead Software Engineer & Architect",
     location: "Philippines",
     socials: {
         linkedin: "https://www.linkedin.com/in/christian-jay-soyosa-78a662239/",
@@ -54,6 +54,18 @@ export const services = [
             "Frontend: React, TypeScript, Tailwind CSS",
             "On-device ML: TensorFlow Lite, embedding-based systems",
             "Vector search using lightweight embedded databases"
+        ]
+    },
+    {
+        title: "DevOps & Cloud",
+        subtitle: "(Deployment & Ops)",
+        icon: Settings,
+        description: "Orchestration and maintenance of both on-premise and cloud-native environments, focusing on observability and high availability.",
+        items: [
+            "On-prem setup: Traefik, Consul, Prometheus, Grafana",
+            "Cloud: Azure Container Apps deployment & management",
+            "Infrastructure as Code (IaC) principles",
+            "Automated monitoring and alerting pipelines"
         ]
     }
 ];
@@ -115,7 +127,7 @@ export const experience = [
 export const projects = [
     {
         title: "WealthSnap — Personal Finance System",
-        category: "FinTech",
+        category: "Product systems",
         description: "A mobile-first personal finance system designed for offline-first operation, where all computations and storage remain on-device due to privacy and dependency constraints on external services.",
         roles: "Product Owner & Engineer",
         teamSize: "Solo Project",
@@ -131,7 +143,7 @@ export const projects = [
     },
     {
         title: "Laniakea — Personal Sentiment Diary System",
-        category: "Experimental",
+        category: "Experimental systems",
         description: "An offline-first journaling system that explores long-term sentiment tracking using embedding-based analysis. Designed as a personal research system rather than a commercial product.",
         roles: "Solo Developer / Researcher",
         teamSize: "Solo Project",
@@ -147,7 +159,7 @@ export const projects = [
     },
     {
         title: "AI-Powered Document Processing Platform",
-        category: "Enterprise",
+        category: "Domain systems",
         description: "A document processing system deployed in controlled enterprise environments where workflows must adapt to existing templates rather than replace them entirely.",
         roles: "Architect & Lead Full Stack Developer",
         teamSize: "4 members",
@@ -166,23 +178,23 @@ export const projects = [
     },
     {
         title: "Enterprise Microservices Core Framework (SDK)",
-        category: "Infrastructure",
-        description: "A shared internal library (JAR) created to standardize and speed up the development of enterprise-grade microservices.",
+        category: "Infrastructure thinking",
+        description: "A high-performance Java-based SDK (JAR) that abstracts infrastructure complexity, providing a standardized foundation for building scalable, cloud-native microservices.",
         roles: "Architect",
         teamSize: "Solo Project",
-        stack: "Java (Spring Boot), Maven",
+        stack: "Java (Spring Boot), Maven, AWS, Azure, RabbitMQ",
         keyPoints: [
-            "Reduced service development time by abstracting common concerns such as security, caching, and database routing into reusable components.",
-            "Designed a pluggable storage layer supporting AWS S3, Azure Blob Storage, and local MinIO without requiring application-level changes.",
-            "Developed custom Spring Boot starters enabling new services to be production-ready with standardized security, logging, and observability from day one.",
-            "Introduced a Backend-for-Frontend (BFF) layer pattern to decouple frontend requirements from core microservices, allowing tailored APIs per client (web, mobile) without impacting core domain services.",
-            "Enabled aggregation and orchestration at the BFF layer, reducing frontend complexity and minimizing cross-service calls in constrained or high-latency environments.",
-            "Standardized internal data contracts to ensure consistent error handling, validation, and transaction behavior across all services."
+            "Architected a pluggable infrastructure layer allowing seamless switching between AWS S3, Azure Blob Storage, and local MinIO without modifying application logic.",
+            "Implemented a unified messaging abstraction supporting RabbitMQ, AWS SQS, and Azure Service Bus, featuring automated resource provisioning (queues/topics) and standardized consumer patterns.",
+            "Developed custom Spring Boot starters that automate security (OAuth 2.1/OIDC), distributed rate limiting, and global exception handling for 'day-one' production readiness.",
+            "Engineered a dynamic RoutingDataSource to support multi-tenant database architectures and flexible data-source switching at runtime.",
+            "Introduced a Backend-for-Frontend (BFF) pattern to decouple client-specific requirements from core domain services, enabling optimized data aggregation and reduced network latency.",
+            "Standardized enterprise data contracts and validation logic, ensuring 100% consistency in error reporting and transaction behavior across the entire service ecosystem."
         ]
     },
     {
         title: "Modern Image Classification Pipeline",
-        category: "AI / ML",
+        category: "Experimental systems",
         description: "End-to-end pipeline for training image classification models. Automatically trains deep learning models and produces detailed performance reports.",
         roles: "Lead AI Developer",
         teamSize: "Solo Project",
@@ -197,7 +209,7 @@ export const projects = [
     },
     {
         title: "Enterprise Authorization & Identity Server",
-        category: "Security",
+        category: "Infrastructure thinking",
         description: "A professional-grade security hub that manages logins and permissions across the entire microservices ecosystem.",
         roles: "Lead Full Stack Developer",
         teamSize: "Solo Project",
@@ -212,7 +224,7 @@ export const projects = [
     },
     {
         title: "Property Tax Management System",
-        category: "Government",
+        category: "Domain systems",
         description: "Comprehensive solution for managing the entire property tax lifecycle including valuation, billing, and collection.",
         roles: "Lead Full Stack Developer",
         teamSize: "3 members",
@@ -226,7 +238,7 @@ export const projects = [
     },
     {
         title: "Business License & Permit System",
-        category: "Government",
+        category: "Domain systems",
         description: "Streamlined platform for managing the application, issuance, and renewal of business licenses and permits.",
         roles: "Lead Full Stack Developer",
         teamSize: "2 members",
@@ -240,21 +252,22 @@ export const projects = [
     },
     {
         title: "Digital Signature Authentication",
-        category: "Security",
+        category: "Infrastructure thinking",
         description: "Electronic system for securing and validating digital signatures, ensuring document authenticity and non-repudiation.",
         roles: "Lead Full Stack Developer",
         teamSize: "Solo Project",
         deployment: "Enterprise Self-Hosted",
         stack: "Java, MySQL, PKCS, iText",
         keyPoints: [
-            "Engineered a complete system for secure document signing using PKCS standards.",
+            "Architected a document signing pipeline initially designed for three internal document types, with structure that allows extension to additional formats over time.",
+            "Built a modular Signature Processor to encapsulate PKCS-based signing logic, helping isolate format-specific handling from the core workflow.",
             "Integrated iText library to embed and validate cryptographic signatures within PDF documents.",
             "Designed secure audit trails and backend logic to manage user credentials and documents."
         ]
     },
     {
         title: "Remote Work Monitoring Platform",
-        category: "Enterprise",
+        category: "Domain systems",
         description: "A comprehensive tool for tracking remote work activities and providing deep insights into productivity.",
         roles: "Lead Full Stack Developer",
         teamSize: "Solo Project",
@@ -268,7 +281,7 @@ export const projects = [
     },
     {
         title: "Document Tracking System",
-        category: "Government",
+        category: "Domain systems",
         description: "Platform for organizing and tracking digital and physical documents with advanced indexing.",
         roles: "Lead Full Stack Developer",
         teamSize: "2 members",
@@ -282,7 +295,7 @@ export const projects = [
     },
     {
         title: "Vaccination Records System",
-        category: "Healthcare",
+        category: "Domain systems",
         description: "System for managing vaccination records, administration scheduling, and compliance monitoring.",
         roles: "Team Lead & Mobile Developer",
         teamSize: "3 members",
