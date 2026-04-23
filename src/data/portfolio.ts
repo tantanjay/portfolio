@@ -154,12 +154,14 @@ export const projects = [
         deployment: "On-Premise",
         stack: "Java (Spring Boot), GraalVM, React, RabbitMQ, PostgreSQL",
         keyPoints: [
-            "Built a template-driven extraction system to handle varied document formats without requiring code changes per document type.",
-            "Introduced runtime schema generation to align extracted data with expected structured formats for downstream systems.",
+            "Architected the end-to-end system, including core service boundaries, database schema design, and event-driven workflow orchestration.",
+            "Designed a template-driven extraction system to handle varied document formats without requiring code changes per document type.",
+            "Introduced runtime schema generation to align extracted data with structured downstream system contracts.",
             "Implemented JavaScript-based transformation hooks for handling inconsistent or vendor-specific document layouts.",
+            "Designed the messaging and workflow pipeline using RabbitMQ to support asynchronous processing and decoupled extraction stages.",
             "Designed a model-agnostic AI layer that can switch between external and internal models depending on deployment constraints.",
-            "Added manual validation workflow for cases where automated extraction confidence is insufficient.",
-            "Integrated existing internal SDK to maintain consistency across services already deployed in production."
+            "Added a manual validation workflow for cases where automated extraction confidence is insufficient.",
+            "Integrated an internal SDK to standardize security, logging, and service communication across the platform."
         ]
     },
     {
@@ -170,10 +172,12 @@ export const projects = [
         teamSize: "Solo Project",
         stack: "Java (Spring Boot), Maven",
         keyPoints: [
-            "Reduced development time by abstracting all the 'boilerplate' code for Security, Caching, and Database routing.",
-            "Engineered a pluggable storage system that supports AWS S3, Azure Blob Storage, or local MinIO without needing to change any application code.",
-            "Developed custom Spring Boot 'starters' that allow any new service to be deployed with enterprise-grade security and logging right out of the box.",
-            "Standardized the internal data contract to ensure consistent error handling and transaction management across all services."
+            "Reduced service development time by abstracting common concerns such as security, caching, and database routing into reusable components.",
+            "Designed a pluggable storage layer supporting AWS S3, Azure Blob Storage, and local MinIO without requiring application-level changes.",
+            "Developed custom Spring Boot starters enabling new services to be production-ready with standardized security, logging, and observability from day one.",
+            "Introduced a Backend-for-Frontend (BFF) layer pattern to decouple frontend requirements from core microservices, allowing tailored APIs per client (web, mobile) without impacting core domain services.",
+            "Enabled aggregation and orchestration at the BFF layer, reducing frontend complexity and minimizing cross-service calls in constrained or high-latency environments.",
+            "Standardized internal data contracts to ensure consistent error handling, validation, and transaction behavior across all services."
         ]
     },
     {
