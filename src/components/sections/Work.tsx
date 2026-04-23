@@ -1,27 +1,49 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../../data/portfolio';
 import { Folder, Code2, Layers, Users, Globe, X, ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const categoryColors: Record<string, string> = {
-    'AI / ML': 'bg-blue-100 text-blue-800',
-    'Security': 'bg-red-100 text-red-800',
-    'Enterprise': 'bg-yellow-100 text-yellow-800',
-    'Government': 'bg-purple-100 text-purple-800',
-    'Healthcare': 'bg-green-100 text-green-800',
-    'FinTech': 'bg-teal-100 text-teal-800',
-    'Experimental': 'bg-orange-100 text-orange-800',
-    'Infrastructure': 'bg-indigo-100 text-indigo-800'
+    'Infrastructure thinking': 'bg-blue-100 text-blue-800',
+    'Domain systems': 'bg-yellow-100 text-yellow-800',
+    'Product systems': 'bg-green-100 text-green-800',
+    'Experimental systems': 'bg-purple-100 text-purple-800'
 };
 
 export default function Work() {
     const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null);
+    const [activeFilter, setActiveFilter] = useState('All');
+
+    // Handle Escape key to close modal
+    useEffect(() => {
+        const handleEsc = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                setSelectedProject(null);
+            }
+        };
+        window.addEventListener('keydown', handleEsc);
+        return () => window.removeEventListener('keydown', handleEsc);
+    }, []);
+
+    // Prevent scroll when modal is open
+    useEffect(() => {
+        if (selectedProject) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [selectedProject]);
+
+    const categories = ['All', ...Object.keys(categoryColors)];
+    const filteredProjects = activeFilter === 'All'
+        ? projects
+        : projects.filter(p => p.category === activeFilter);
 
     return (
         <section id="work" className="py-20 bg-white relative">
             <div className="container mx-auto px-6 md:px-12">
 
-                <div className="mb-16 text-center md:text-left">
+                <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -31,66 +53,87 @@ export default function Work() {
                         <span className="block text-xs font-bold text-gray-400 uppercase tracking-[3px] mb-2">
                             My Work
                         </span>
-                        <h2 className="text-3xl font-bold font-serif mb-6 uppercase tracking-[3px]">
+                        <h2 className="text-3xl font-bold font-serif mb-0 uppercase tracking-[3px]">
                             Featured Projects
                         </h2>
                     </motion.div>
+
+                    <div className="flex flex-wrap gap-3">
+                        {categories.map((cat) => (
+                            <button
+                                key={cat}
+                                onClick={() => setActiveFilter(cat)}
+                                className={`px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${activeFilter === cat
+                                    ? 'bg-gray-900 text-white border-gray-900 shadow-lg'
+                                    : 'bg-white text-gray-400 border-gray-100 hover:border-gray-300 hover:text-gray-600'
+                                    }`}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative bg-white border border-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
-                        >
-                            <div className="p-8 flex-grow flex flex-col">
-                                <div className="flex justify-between items-start mb-4">
-                                    <div className="p-3 bg-gray-50 rounded-lg group-hover:bg-primary/10 transition-colors">
-                                        <Folder size={28} className="text-gray-400 group-hover:text-primary transition-colors" />
-                                    </div>
-                                    <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ${categoryColors[project.category] || 'bg-gray-100 text-gray-600'}`}>
-                                        {project.category}
-                                    </span>
-                                </div>
-
-                                <h3 className="text-xl font-bold font-serif mb-2 group-hover:text-primary transition-colors">
-                                    {project.title}
-                                </h3>
-
-                                <p className="text-gray-600 mb-6 font-sans text-sm leading-relaxed line-clamp-3">
-                                    {project.description}
-                                </p>
-
-                                <div className="space-y-3 mb-6 flex-grow">
-                                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                                        <Layers size={16} className="text-primary/70" />
-                                        <span className="font-semibold text-gray-700">Role:</span> {project.roles}
-                                    </div>
-                                    <div className="flex items-start gap-2 text-sm text-gray-500">
-                                        <Code2 size={16} className="text-primary/70 mt-1 flex-shrink-0" />
-                                        <span>
-                                            <span className="font-semibold text-gray-700">Stack:</span> {project.stack}
+                <motion.div
+                    layout
+                    className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                >
+                    <AnimatePresence mode='popLayout'>
+                        {filteredProjects.map((project) => (
+                            <motion.div
+                                key={project.title}
+                                layout
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.9 }}
+                                transition={{ duration: 0.4 }}
+                                className="group relative bg-white border border-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
+                            >
+                                <div className="p-8 flex-grow flex flex-col">
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div className="p-3 bg-gray-50 rounded-lg group-hover:bg-primary/10 transition-colors">
+                                            <Folder size={28} className="text-gray-400 group-hover:text-primary transition-colors" />
+                                        </div>
+                                        <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ${categoryColors[project.category] || 'bg-gray-100 text-gray-600'}`}>
+                                            {project.category}
                                         </span>
                                     </div>
-                                    {/* Show basic info in card, detailed in modal */}
-                                </div>
 
-                                <div className="mt-auto pt-6 border-t border-gray-100">
-                                    <button
-                                        onClick={() => setSelectedProject(project)}
-                                        className="text-primary text-sm font-bold uppercase tracking-widest hover:underline flex items-center gap-2"
-                                    >
-                                        View Details <ExternalLink size={14} />
-                                    </button>
+                                    <h3 className="text-xl font-bold font-serif mb-2 group-hover:text-primary transition-colors">
+                                        {project.title}
+                                    </h3>
+
+                                    <p className="text-gray-600 mb-6 font-sans text-sm leading-relaxed line-clamp-3">
+                                        {project.description}
+                                    </p>
+
+                                    <div className="space-y-3 mb-6 flex-grow">
+                                        <div className="flex items-center gap-2 text-sm text-gray-500">
+                                            <Layers size={16} className="text-primary/70" />
+                                            <span className="font-semibold text-gray-700">Role:</span> {project.roles}
+                                        </div>
+                                        <div className="flex items-start gap-2 text-sm text-gray-500">
+                                            <Code2 size={16} className="text-primary/70 mt-1 flex-shrink-0" />
+                                            <span>
+                                                <span className="font-semibold text-gray-700">Stack:</span> {project.stack}
+                                            </span>
+                                        </div>
+                                        {/* Show basic info in card, detailed in modal */}
+                                    </div>
+
+                                    <div className="mt-auto pt-6 border-t border-gray-100">
+                                        <button
+                                            onClick={() => setSelectedProject(project)}
+                                            className="text-primary text-sm font-bold uppercase tracking-widest hover:underline flex items-center gap-2"
+                                        >
+                                            View Details <ExternalLink size={14} />
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </motion.div>
 
             </div>
 

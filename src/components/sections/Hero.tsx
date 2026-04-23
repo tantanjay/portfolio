@@ -48,11 +48,12 @@ export default function Hero() {
                         Hi! <br /> I'm {personalInfo.name.split(' ')[0]}
                     </h1>
                     <p className="text-xl md:text-2xl font-sans text-black/80 mb-8 border-b-2 border-primary inline-block pb-2">
-                        Software Developer | Architect | Tech Enthusiast
+                        Software Engineer | Architect | Tech Enthusiast
                     </p>
                     <a
-                        href="#"
-                        download
+                        href={personalInfo.socials.jobstreet}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn inline-block px-6 py-3 border border-black text-black font-medium uppercase tracking-widest hover:bg-black hover:text-white transition-colors whitespace-nowrap"
                     >
                         Download CV
