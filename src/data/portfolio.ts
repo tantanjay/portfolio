@@ -1,4 +1,4 @@
-import { Globe, Monitor, Smartphone, Database, Layers, Lightbulb } from 'lucide-react';
+import { Database, Lightbulb, Sparkle } from 'lucide-react';
 
 export const personalInfo = {
     name: "Christian Jay Soyosa",
@@ -14,68 +14,49 @@ export const personalInfo = {
 export const about = {
     heading: "Who Am I?",
     text: [
-        "I'm Christian Jay Soyosa, a Lead Software Engineer dedicated to architecting and engineering robust, scalable systems. My expertise spans the full software lifecycle—from designing high-integrity backend architectures to delivering production-ready web, mobile, and desktop applications.",
-        "I am committed to staying at the forefront of technology by integrating modern methodologies and emerging tools. This proactive approach ensures my solutions are not only effective for today’s challenges but also future-proof."
-    ],
-    services: [
-        { title: "Web", icon: Globe, color: "blue" },
-        { title: "Desktop", icon: Monitor, color: "red" },
-        { title: "Mobile", icon: Smartphone, color: "yellow" },
-        { title: "Database", icon: Database, color: "purple" }
+        "I am a Lead Software Engineer with over 15 years of experience building and maintaining enterprise systems, particularly in government and regulated environments where constraints such as legacy infrastructure, limited connectivity, and long-term maintainability shape architectural decisions.",
+        "My work focuses on designing backend systems and AI-enabled workflows that integrate into existing enterprise ecosystems without requiring full system replacement. This includes event-driven microservices, on-device processing, and incremental modernization strategies."
     ]
 };
 
 export const services = [
     {
-        title: "Engineering Leadership",
+        title: "Architecture & Leadership",
+        subtitle: "(Core Competencies)",
         icon: Lightbulb,
-        description: "Architecting and guiding projects from concept to deployment, ensuring teams deliver high-quality, maintainable, and enterprise-grade code."
+        description: "System design and technical leadership focused on evolving legacy-heavy enterprise environments into maintainable distributed systems without disrupting existing operations.",
+        items: [
+            "Microservices migration (incremental, legacy-coexistence architectures)",
+            "Enterprise SDK design used to reduce duplication across teams",
+            "System design under infrastructure and governance constraints",
+            "Security: OAuth 2.1, OIDC, role-based and zero-trust patterns"
+        ]
     },
     {
-        title: "Full Stack Engineering",
-        icon: Layers,
-        description: "Engineering end-to-end solutions, from designing scalable server-side logic and APIs to building intuitive, responsive user interfaces."
-    },
-    {
-        title: "Database Architecture",
+        title: "Backend & Database",
+        subtitle: "(Expert Level)",
         icon: Database,
-        description: "Designing and optimizing robust database schemas to ensure data integrity and high performance for data-intensive applications."
+        description: "Design and maintenance of backend systems operating under mixed environments (on-premise + hybrid cloud), with emphasis on reliability and operational continuity.",
+        items: [
+            "Java (Spring Boot, Spring AI, Hibernate)",
+            "PostgreSQL, MySQL, SQLite, Redis in production and embedded contexts",
+            "Cross-platform components (C#, VB.NET legacy systems integration)",
+            "GraalVM for polyglot execution in controlled environments"
+        ]
+    },
+    {
+        title: "Product & AI Development",
+        subtitle: "(Applied Systems)",
+        icon: Sparkle,
+        description: "Integration of AI models into production systems, typically constrained by privacy requirements, offline operation, or cost limitations.",
+        items: [
+            "Mobile systems: Kotlin (Android), React Native (Expo)",
+            "Frontend: React, TypeScript, Tailwind CSS",
+            "On-device ML: TensorFlow Lite, embedding-based systems",
+            "Vector search using lightweight embedded databases"
+        ]
     }
 ];
-
-export const skills = {
-    specialty: "My Specialty",
-    description: "Leveraging over a decade of experience, I offer a comprehensive skill set focused on engineering high-impact software solutions.",
-    categories: [
-        {
-            title: "Core Strengths",
-            subtitle: "(Expert-Level)",
-            items: [
-                "Backend: Java (Spring Boot, Spring Framework, Java EE)",
-                "Database: MySQL, PostgreSQL, SQLite, Hibernate",
-                "Windows Desktop: C#, VB.NET"
-            ]
-        },
-        {
-            title: "Proficient",
-            subtitle: "(Professional-Level)",
-            items: [
-                "Frontend: React, TypeScript",
-                "Mobile (Native): Java, Kotlin (Android SDK)"
-            ]
-        },
-        {
-            title: "Research & Prototyping",
-            subtitle: "(Personal & Development)",
-            items: [
-                "AI / ML: Python, TensorFlow",
-                "Cross-Platform: Expo, React Native",
-                "Analytics: R",
-                "Web3: Web3.js"
-            ]
-        }
-    ]
-};
 
 export const education = [
     {
@@ -102,68 +83,97 @@ export const experience = [
     {
         role: "Lead Developer",
         company: "FPOSI",
-        period: "2023-Present",
-        description: "Orchestrating technical strategy and engineering for Local Government Unit (LGU) projects. I specialize in architecting customized solutions that modernize complex governmental operations and data workflows."
+        period: "2023 - Present",
+        description: "Leading development for LGU-facing systems, including document processing and data workflows deployed in environments with strict on-premise constraints and limited external dependencies. Currently involved in incremental migration of core services to Spring Boot 4 while maintaining compatibility with existing production systems still in active use."
     },
     {
         role: "Lead Developer",
         company: "IDCSI",
-        period: "2018-2023",
-        description: "Managing the full project lifecycle and mentoring a team of developers. Successfully architected and deployed a diverse portfolio of full-stack web applications and enterprise desktop solutions."
+        period: "2018 - 2023",
+        description: "Managed multiple enterprise systems deployed across government and private clients, often requiring integration with older desktop applications and inconsistent infrastructure environments. Focused on maintaining system uptime while gradually introducing service-oriented architecture patterns."
     },
     {
         role: "Senior Developer",
         company: "IDCSI",
-        period: "2011-2018",
-        description: "Engineered enterprise-level software and took ownership of complex module development. Focused on optimizing database performance and ensuring system reliability through clean code architecture."
+        period: "2011 - 2018",
+        description: "Worked on core enterprise modules including database-heavy systems and reporting tools. Much of the work involved maintaining and optimizing systems that had already been in production for years, with emphasis on stability and performance under increasing data loads."
     },
     {
         role: "Programming Instructor",
         company: "Flora Ylagan High School",
-        period: "2015-2016",
-        description: "Designed and delivered a comprehensive Computer Science curriculum for Grade 10 students, focusing on logic, C, VB.NET, and MySQL."
+        period: "2015 - 2016",
+        description: "Designed curriculum for Computer Science students, focusing on algorithmic logic and database design using C and MySQL."
     },
     {
         role: "Programmer",
         company: "Leyte Provincial Capitol",
-        period: "2010-2011",
-        description: "Initiated my professional career by developing the backend logic for the provincial government's payroll and records system."
+        period: "2010 - 2011",
+        description: "Developed backend logic for provincial payroll and records systems, marking the start of a decade-plus career in government tech modernization."
     }
 ];
 
 export const projects = [
     {
-        title: "WealthSnap — Your Financial Mirror",
+        title: "WealthSnap — Personal Finance System",
         category: "FinTech",
-        description: "A fully deployed, privacy-first personal finance ecosystem. Features a zero-knowledge architecture and custom algorithmic engines to provide high-resolution insights into net worth and spending behavior.",
+        description: "A mobile-first personal finance system designed for offline-first operation, where all computations and storage remain on-device due to privacy and dependency constraints on external services.",
         roles: "Product Owner & Engineer",
         teamSize: "Solo Project",
         deployment: "Production (Google Play Store)",
-        stack: "React Native, Expo (New Architecture), SQLite, Google Gemini API",
+        stack: "React Native, Expo, SQLite, Google Gemini API",
         keyPoints: [
-            "Architected a 'Local-First' zero-knowledge system where all financial logic resides strictly on-device, ensuring absolute privacy.",
-            "Engineered a 'Safe to Spend' algorithm that dynamically calculates discretionary income by factoring in 90-day 'Life Burnrate.'",
-            "Developed a multi-asset investment engine supporting Stocks, MP2, and Crypto with automated ledger synchronization.",
-            "Implemented advanced visualizations including Allocation Treemaps and 'Pulse' velocity graphs for spending analysis.",
-            "Integrated a 'Bring Your Own AI' (BYO-AI) module leveraging Google Gemini for local receipt scanning.",
-            "Designed 'Subway Safe' privacy features, including biometric masking and high-precision math via BigNumber.js."
+            "Designed to operate fully offline, with cloud services only used for optional AI-assisted features like receipt parsing.",
+            "Implemented a spending model that recalculates available budget based on rolling historical expenditure rather than static budgeting rules.",
+            "Built multi-asset tracking for stocks, crypto, and savings, consolidated into a single local ledger.",
+            "Added visualization layers for spending patterns to help identify recurring financial behavior rather than just totals.",
+            "Integrated optional AI processing for document extraction, with all sensitive computation retained locally."
         ]
     },
     {
-        title: "Laniakea — Personal Sentiment Trajectory Diary",
+        title: "Laniakea — Personal Sentiment Diary System",
         category: "Experimental",
-        description: "An on-device, privacy-first personal diary framework for longitudinal sentiment tracking. Uses high-dimensional embeddings to map daily writing into semantic trajectories, allowing the user to observe patterns in mood and behavior without cloud storage or invasive tracking.",
+        description: "An offline-first journaling system that explores long-term sentiment tracking using embedding-based analysis. Designed as a personal research system rather than a commercial product.",
         roles: "Solo Developer / Researcher",
         teamSize: "Solo Project",
-        deployment: "Personal / Local-Only",
-        stack: "Kotlin (Android), SQLite + sqlite-vec, ONNX Runtime Mobile, UMAP/PCA, Lightweight Transformer Embeddings",
+        deployment: "Local-Only",
+        stack: "Kotlin, SQLite, TFLite, vector embeddings",
         keyPoints: [
-            "Transforms daily diary entries into high-dimensional embeddings (Gemma 3-270M / Qwen3-0.6B) with ephemeral memory handling.",
-            "Applies differential privacy (Laplacian noise) to all persisted vectors to prevent inversion of raw text.",
-            "Computes angular semantic velocity and acceleration to track high-dimensional mood trajectories.",
-            "Uses K-Nearest Neighbors and optional manifold projection (UMAP/PCA) to find symmetric patterns in the user's historical entries.",
-            "Implements defensive UI to mitigate self-fulfilling prophecies: only non-deterministic pattern observation is surfaced.",
-            "Designed as a long-term personal experiment with strict local-first storage and optional visualization of semantic drift."
+            "Converts journal entries into embeddings stored locally for longitudinal analysis.",
+            "Applies lightweight noise injection to reduce direct reversibility of stored vectors.",
+            "Tracks changes in semantic similarity over time to observe gradual shifts in writing patterns.",
+            "Uses simple clustering methods (KNN, projection techniques) for pattern exploration rather than prediction.",
+            "Designed with a deliberate constraint of avoiding cloud dependency or external model reliance."
+        ]
+    },
+    {
+        title: "AI-Powered Document Processing Platform",
+        category: "Enterprise",
+        description: "A document processing system deployed in controlled enterprise environments where workflows must adapt to existing templates rather than replace them entirely.",
+        roles: "Architect & Lead Full Stack Developer",
+        teamSize: "4 members",
+        deployment: "On-Premise",
+        stack: "Java (Spring Boot), GraalVM, React, RabbitMQ, PostgreSQL",
+        keyPoints: [
+            "Built a template-driven extraction system to handle varied document formats without requiring code changes per document type.",
+            "Introduced runtime schema generation to align extracted data with expected structured formats for downstream systems.",
+            "Implemented JavaScript-based transformation hooks for handling inconsistent or vendor-specific document layouts.",
+            "Designed a model-agnostic AI layer that can switch between external and internal models depending on deployment constraints.",
+            "Added manual validation workflow for cases where automated extraction confidence is insufficient.",
+            "Integrated existing internal SDK to maintain consistency across services already deployed in production."
+        ]
+    },
+    {
+        title: "Enterprise Microservices Core Framework (SDK)",
+        category: "Infrastructure",
+        description: "A shared internal library (JAR) created to standardize and speed up the development of enterprise-grade microservices.",
+        roles: "Architect",
+        teamSize: "Solo Project",
+        stack: "Java (Spring Boot), Maven",
+        keyPoints: [
+            "Reduced development time by abstracting all the 'boilerplate' code for Security, Caching, and Database routing.",
+            "Engineered a pluggable storage system that supports AWS S3, Azure Blob Storage, or local MinIO without needing to change any application code.",
+            "Developed custom Spring Boot 'starters' that allow any new service to be deployed with enterprise-grade security and logging right out of the box.",
+            "Standardized the internal data contract to ensure consistent error handling and transaction management across all services."
         ]
     },
     {
@@ -173,7 +183,7 @@ export const projects = [
         roles: "Lead AI Developer",
         teamSize: "Solo Project",
         deployment: "Local / Cloud",
-        stack: "Python, TensorFlow, Keras, Pandas, Scikit-learn, Matplotlib, Seaborn",
+        stack: "Python, TFLite, Keras, Pandas, Scikit-learn, Matplotlib, Seaborn",
         keyPoints: [
             "Engineered a robust data loader to automatically preprocess and augment thousands of images using RandAugment.",
             "Designed a flexible model builder leveraging transfer learning from EfficientNetV2 with a custom classification head.",
@@ -184,31 +194,16 @@ export const projects = [
     {
         title: "Enterprise Authorization & Identity Server",
         category: "Security",
-        description: "Production-grade identity provider built with Spring Authorization Server. Centralized authentication and authorization for microservices ecosystems.",
+        description: "A professional-grade security hub that manages logins and permissions across the entire microservices ecosystem.",
         roles: "Lead Full Stack Developer",
         teamSize: "Solo Project",
         deployment: "Clustered, High-Availability (HA) Environment",
-        stack: "Java (Spring Boot), OAuth 2.1, OIDC, MySQL, Redis, Thymeleaf",
+        stack: "Java (Spring Boot), OAuth 2.1, OIDC, MySQL, Redis",
         keyPoints: [
-            "Implemented full OAuth 2.1 and OIDC-compliant server supporting Authorization Code (PKCE), Client Credentials, and Refresh Token grants.",
-            "Architected a high-performance database layer with read/write splitting using AbstractRoutingDataSource.",
-            "Built an automated, cluster-safe JWT key rotation system using JWKSource and ShedLock.",
-            "Integrated a distributed Redis cache for optimized client authorizations and session management."
-        ]
-    },
-    {
-        title: "AI-Powered Document Extraction Platform",
-        category: "Enterprise",
-        description: "Advanced system for automating data extraction from complex documents (invoices, bills, receipts) using AI.",
-        roles: "Lead Full Stack Developer",
-        teamSize: "4 members",
-        deployment: "Publicly-Hosted On-Premises",
-        stack: "Java (Spring Boot), React, C#, Hibernate, RabbitMQ, Redis, Traefik, Vault",
-        keyPoints: [
-            "Architected a scalable microservices infrastructure managing Spring Boot instance replication.",
-            "Led backend development, creating RESTful APIs for AI integration and mobile capture.",
-            "Built critical React UI modules including System Configuration and real-time Analytics Dashboards.",
-            "Implemented core logic for data verification and AI output cleansing."
+            "Built a central identity provider following the latest OAuth 2.1 and OIDC standards to secure internal and external service communication.",
+            "Implemented an automated, cluster-safe system to rotate security keys without any manual intervention or downtime.",
+            "Served as the primary security gateway for the AI Document Platform, managing all user permissions and distributed session data via Redis.",
+            "Optimized database performance using read/write splitting to ensure fast authentication even during high-traffic periods."
         ]
     },
     {
@@ -295,11 +290,4 @@ export const projects = [
             "Ensured robust data synchronization between mobile units and central LGU servers."
         ]
     }
-];
-
-export const stats = [
-    { label: "Cups of Coffee", value: 500, suffix: "+" },
-    { label: "Lines of Code", value: 100000, suffix: "+" },
-    { label: "Enterprise Systems", value: 8, suffix: "" },
-    { label: "Tools Developed", value: 100, suffix: "+" }
 ];

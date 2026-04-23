@@ -11,6 +11,7 @@ const categoryColors: Record<string, string> = {
     'Healthcare': 'bg-green-100 text-green-800',
     'FinTech': 'bg-teal-100 text-teal-800',
     'Experimental': 'bg-orange-100 text-orange-800',
+    'Infrastructure': 'bg-indigo-100 text-indigo-800'
 };
 
 export default function Work() {
