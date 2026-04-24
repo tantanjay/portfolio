@@ -19,6 +19,9 @@ export default {
                     yellow: "#f9bf3f",
                     purple: "#a84cb8",
                     teal: "#2fa499",
+                    pink: "#ff6b97",
+                    orange: "#ff9a56",
+                    green: "#2fa499",
                 },
                 sidebar: "#f2f3f7",
             }

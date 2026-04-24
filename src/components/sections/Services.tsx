@@ -8,8 +8,9 @@ import { ChevronRight } from 'lucide-react';
 const serviceColors = [
     'border-b-accent-blue text-accent-blue',
     'border-b-accent-red text-accent-red',
-    'border-b-accent-yellow text-accent-yellow',
     'border-b-accent-green text-accent-green',
+    'border-b-accent-yellow text-accent-yellow',
+    'border-b-accent-purple text-accent-purple',
 ];
 
 export default function Services() {
