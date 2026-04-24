@@ -1,4 +1,4 @@
-import { Database, Lightbulb, Sparkle, Settings } from 'lucide-react';
+import { Database, Lightbulb, Sparkle, Settings, Link } from 'lucide-react';
 
 export const personalInfo = {
     name: "Christian Jay Soyosa",
@@ -24,12 +24,12 @@ export const services = [
         title: "Architecture & Leadership",
         subtitle: "(Core Competencies)",
         icon: Lightbulb,
-        description: "System design and technical leadership focused on evolving legacy-heavy enterprise environments into maintainable distributed systems without disrupting existing operations.",
+        description: "System design and technical leadership focused on building scalable, maintainable backend architectures and guiding technical direction across enterprise systems.",
         items: [
-            "Microservices migration (incremental, legacy-coexistence architectures)",
-            "Enterprise SDK design used to reduce duplication across teams",
-            "System design under infrastructure and governance constraints",
-            "Security: OAuth 2.1, OIDC, role-based and zero-trust patterns"
+            "Microservices architecture design and service decomposition",
+            "Enterprise SDK and platform design to standardize development across teams",
+            "System design under infrastructure, performance, and governance constraints",
+            "Security architecture: OAuth 2.1, OIDC, role-based access control, and zero-trust patterns"
         ]
     },
     {
@@ -57,13 +57,27 @@ export const services = [
         ]
     },
     {
-        title: "DevOps & Cloud",
-        subtitle: "(Deployment & Ops)",
-        icon: Settings,
-        description: "Orchestration and maintenance of both on-premise and cloud-native environments, focusing on observability and high availability.",
+        title: "Systems Integration",
+        subtitle: "(Enterprise Interoperability)",
+        icon: Link,
+        description: "Design and implementation of integration layers connecting legacy, desktop, and modern distributed systems in constrained environments.",
         items: [
-            "On-prem setup: Traefik, Consul, Prometheus, Grafana",
-            "Cloud: Azure Container Apps deployment & management",
+            "Legacy system integration (VB.NET, desktop-to-web bridging)",
+            "API mediation and protocol translation (REST, messaging, file-based workflows)",
+            "Data synchronization across distributed and intermittently connected systems",
+            "Incremental modernization without full system replacement"
+        ]
+    },
+    {
+        title: "DevOps & Cloud",
+        subtitle: "(Practitioner Level)",
+        icon: Settings,
+        description: "Deployment and coordination of distributed services in on-premise and cloud environments, focusing on observability and high availability.",
+        items: [
+            "Service routing and ingress management using Traefik",
+            "Service discovery and configuration with Consul",
+            "Monitoring and observability using Prometheus and Grafana",
+            "Cloud deployment using Azure Container Apps",
             "Infrastructure as Code (IaC) principles",
             "Automated monitoring and alerting pipelines"
         ]
