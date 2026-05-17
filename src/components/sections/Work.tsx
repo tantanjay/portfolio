@@ -4,10 +4,17 @@ import { Folder, Code2, Layers, Users, Globe, X, ExternalLink } from 'lucide-rea
 import { useState, useEffect } from 'react';
 
 const categoryColors: Record<string, string> = {
-    'Infrastructure thinking': 'bg-blue-100 text-blue-800',
-    'Domain systems': 'bg-yellow-100 text-yellow-800',
-    'Product systems': 'bg-green-100 text-green-800',
-    'Experimental systems': 'bg-purple-100 text-purple-800'
+    'Backend': 'bg-green-100 text-green-800',
+    'AI & ML': 'bg-fuchsia-100 text-fuchsia-800',
+    'Web': 'bg-blue-100 text-blue-800',
+    'Mobile': 'bg-yellow-100 text-yellow-800',
+    'Desktop': 'bg-orange-100 text-orange-800',
+    'Infrastructure': 'bg-slate-100 text-slate-800',
+    'Security': 'bg-red-100 text-red-800',
+    'Enterprise': 'bg-indigo-100 text-indigo-800',
+    'Government': 'bg-amber-100 text-amber-800',
+    'Live': 'bg-emerald-100 text-emerald-800',
+    'Experimental': 'bg-purple-100 text-purple-800',
 };
 
 export default function Work() {
@@ -34,10 +41,12 @@ export default function Work() {
         }
     }, [selectedProject]);
 
-    const categories = ['All', ...Object.keys(categoryColors)];
+    const gens = Array.from(new Set(projects.map(p => (p as any).generation).filter(Boolean))).sort().reverse();
+    const filters = ['All', ...Object.keys(categoryColors), ...gens];
+
     const filteredProjects = activeFilter === 'All'
         ? projects
-        : projects.filter(p => p.category === activeFilter);
+        : projects.filter(p => p.categories.includes(activeFilter) || (p as any).generation === activeFilter);
 
     return (
         <section id="work" className="py-20 bg-white relative">
@@ -59,16 +68,16 @@ export default function Work() {
                     </motion.div>
 
                     <div className="flex flex-wrap gap-3">
-                        {categories.map((cat) => (
+                        {filters.map((filter) => (
                             <button
-                                key={cat}
-                                onClick={() => setActiveFilter(cat)}
-                                className={`px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${activeFilter === cat
+                                key={filter}
+                                onClick={() => setActiveFilter(filter)}
+                                className={`px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${activeFilter === filter
                                     ? 'bg-gray-900 text-white border-gray-900 shadow-lg'
                                     : 'bg-white text-gray-400 border-gray-100 hover:border-gray-300 hover:text-gray-600'
                                     }`}
                             >
-                                {cat}
+                                {filter}
                             </button>
                         ))}
                     </div>
@@ -94,14 +103,25 @@ export default function Work() {
                                         <div className="p-3 bg-gray-50 rounded-lg group-hover:bg-primary/10 transition-colors">
                                             <Folder size={28} className="text-gray-400 group-hover:text-primary transition-colors" />
                                         </div>
-                                        <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ${categoryColors[project.category] || 'bg-gray-100 text-gray-600'}`}>
-                                            {project.category}
-                                        </span>
+                                        <div className="flex flex-wrap gap-1.5 justify-end">
+                                            {project.categories.map((cat, idx) => (
+                                                <span key={idx} className={`text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider ${categoryColors[cat] || 'bg-gray-100 text-gray-600'}`}>
+                                                    {cat}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
 
-                                    <h3 className="text-xl font-bold font-serif mb-2 group-hover:text-primary transition-colors">
-                                        {project.title}
-                                    </h3>
+                                    <div className="flex items-start justify-between gap-3 mb-2">
+                                        <h3 className="text-xl font-bold font-serif group-hover:text-primary transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        {project.year && (
+                                            <span className="px-2 py-1 mt-1 bg-gray-50 text-gray-500 text-[10px] font-bold rounded border border-gray-100 shrink-0">
+                                                {project.year}
+                                            </span>
+                                        )}
+                                    </div>
 
                                     <p className="text-gray-600 mb-6 font-sans text-sm leading-relaxed line-clamp-3">
                                         {project.description}
@@ -162,12 +182,23 @@ export default function Work() {
                             </button>
 
                             <div className="p-8 md:p-10">
-                                <span className={`inline-block mb-4 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ${categoryColors[selectedProject.category] || 'bg-gray-100 text-gray-600'}`}>
-                                    {selectedProject.category}
-                                </span>
-                                <h3 className="text-2xl md:text-3xl font-bold font-serif mb-4 text-gray-900">
-                                    {selectedProject.title}
-                                </h3>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {selectedProject.categories.map((cat, idx) => (
+                                        <span key={idx} className={`inline-block text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ${categoryColors[cat] || 'bg-gray-100 text-gray-600'}`}>
+                                            {cat}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div className="flex flex-wrap items-center gap-4 mb-4">
+                                    <h3 className="text-2xl md:text-3xl font-bold font-serif text-gray-900">
+                                        {selectedProject.title}
+                                    </h3>
+                                    {selectedProject.year && (
+                                        <span className="px-3 py-1 bg-gray-50 text-gray-500 text-sm font-bold rounded border border-gray-100 shrink-0">
+                                            {selectedProject.year}
+                                        </span>
+                                    )}
+                                </div>
                                 <p className="text-gray-600 mb-8 font-sans leading-relaxed text-lg">
                                     {selectedProject.description}
                                 </p>
