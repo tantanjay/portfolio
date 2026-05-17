@@ -356,7 +356,7 @@ const evolutionBase = [
     {
         generation: "Gen 0",
         title: "Foundation Systems",
-        period: "2011-2015",
+        period: "2010-2015",
         description: "Database-centric application development under constrained government and enterprise environments. This is the “systems literacy” phase — learning how data, constraints, and production workflows actually behave.",
         impact: "Learned production data behavior",
         projects: [
