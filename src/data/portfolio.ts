@@ -14,9 +14,11 @@ export const personalInfo = {
 export const about = {
     heading: "Who Am I?",
     text: [
-        "I am a Lead Software Engineer and systems architect with 15+ years of experience building and modernizing enterprise platforms in regulated and mission-critical environments, where reliability, security, and long-term scalability are non-negotiable.",
-        "My work focuses on designing and building backend platforms rather than isolated applications — including identity and access management (IAM), intelligent document processing (IDP) systems, and schema-driven execution runtimes that turn unstructured inputs into governed, structured outcomes.",
-        "I specialize in building platform scaffolds and infrastructure layers that other systems run on top of — identity, messaging, storage, and orchestration — with a strong emphasis on clear system boundaries, secure multi-tenant design, and deterministic runtime behavior."
+        "I am a Lead Software Engineer and platform architect with over 15 years of experience building and modernizing enterprise systems in government and regulated environments, where reliability, security, and long-term operational continuity are core constraints rather than optional concerns.",
+        
+        "My work focuses on designing and building backend platforms rather than isolated applications — including identity and access management (IAM), intelligent document processing (IDP) systems, and schema-driven execution runtimes that transform unstructured enterprise data into structured, governed workflows.",
+        
+        "I specialize in building reusable platform scaffolds and infrastructure layers that function as internal enterprise execution foundations — covering identity, messaging, storage, orchestration, and AI-enabled workflows — enabling faster development of domain-specific systems while maintaining strict consistency, scalability, and security across distributed environments."
     ]
 };
 
@@ -25,62 +27,62 @@ export const services = [
         title: "Architecture & Leadership",
         subtitle: "(Core Competencies)",
         icon: Lightbulb,
-        description: "System architecture and technical leadership focused on progressive modernization of enterprise systems operating under infrastructure, governance, and operational constraints.",
+        description: "Enterprise system architecture and technical leadership focused on building scalable platforms for regulated environments, with emphasis on incremental modernization and production reliability.",
         items: [
-            "Event-driven microservices architecture and bounded service decomposition",
-            "Enterprise SDK and internal platform engineering for operational standardization",
-            "Incremental modernization strategies for actively used production systems",
-            "Security architecture using OAuth 2.1, OIDC, RBAC, and zero-trust communication patterns"
+            "Event-driven microservices architecture and bounded context decomposition for enterprise-scale systems",
+            "Design of internal platforms and SDKs that standardize infrastructure behavior across teams and services",
+            "Incremental modernization strategies for legacy systems without disrupting active production workloads",
+            "Security architecture using OAuth 2.1, OIDC, RBAC, and zero-trust communication models across distributed services"
         ]
     },
     {
         title: "Backend & Distributed Systems",
         subtitle: "(Expert Level)",
         icon: Database,
-        description: "Design and implementation of distributed backend systems emphasizing operational resilience, interoperability, and infrastructure portability across hybrid environments.",
+        description: "Design and implementation of distributed backend systems with emphasis on scalability, resilience, and cross-environment interoperability across hybrid enterprise deployments.",
         items: [
-            "Java (Spring Boot, Spring AI, Hibernate, GraalVM)",
-            "Messaging systems using RabbitMQ, asynchronous workflows, and queue orchestration",
-            "PostgreSQL, MySQL, SQLite, Redis across enterprise and embedded deployments",
-            "Cross-platform interoperability with legacy desktop systems (VB.NET, C#, Java)"
+            "Java (Spring Boot, Spring AI, Hibernate, GraalVM runtime execution)",
+            "Messaging systems using RabbitMQ, asynchronous processing pipelines, and queue orchestration",
+            "PostgreSQL, MySQL, SQLite, Redis across enterprise, hybrid, and embedded deployments",
+            "Cross-platform interoperability with legacy enterprise systems (VB.NET, C#, Java)"
         ]
     },
     {
         title: "Applied AI & Product Systems",
         subtitle: "(Production-Focused AI)",
         icon: Sparkle,
-        description: "Practical integration of AI systems into enterprise and offline-first environments where deployment flexibility, privacy, and operational continuity are critical.",
+        description: "Practical integration of AI systems into enterprise platforms, focusing on offline-first, privacy-preserving, and production-grade AI workflows.",
         items: [
-            "Model-agnostic AI orchestration supporting configurable providers and local inference",
-            "On-device ML using TensorFlow Lite, embeddings, and lightweight vector systems",
-            "Mobile systems: Kotlin (Android), React Native (Expo)",
-            "Frontend systems using React, TypeScript, and Tailwind CSS"
+            "Model-agnostic AI orchestration supporting multiple providers and local inference pipelines",
+            "On-device ML using TensorFlow Lite, embeddings, and lightweight vector-based systems",
+            "Mobile system development using Kotlin (Android), React Native (Expo)",
+            "Frontend systems built with React, TypeScript, and Tailwind CSS for enterprise-grade interfaces"
         ]
     },
     {
         title: "Systems Integration",
         subtitle: "(Enterprise Interoperability)",
         icon: Link,
-        description: "Integration of legacy, desktop, and distributed enterprise systems operating under inconsistent infrastructure and constrained deployment environments.",
+        description: "Integration layer design for enterprise systems operating under heterogeneous, legacy, and constrained infrastructure environments — including distributed and intermittently connected systems.",
         items: [
-            "Legacy modernization through gradual service extraction and infrastructure abstraction",
-            "Protocol mediation across REST APIs, messaging workflows, and file-based integrations",
-            "Distributed synchronization strategies for intermittently connected deployments",
-            "Backend-for-Frontend (BFF) and integration gateway design patterns"
+            "Legacy system modernization through gradual service extraction and integration abstraction layers",
+            "Protocol mediation across REST APIs, file-based ingestion, and message-driven workflows",
+            "Distributed synchronization strategies for intermittently connected or offline-first enterprise deployments",
+            "Backend-for-Frontend (BFF) and integration gateway patterns for multi-client enterprise environments"
         ]
     },
     {
         title: "Platform Engineering & DevOps",
         subtitle: "(Operational Infrastructure)",
         icon: Settings,
-        description: "Design of reusable infrastructure foundations focused on observability, deployment portability, and operational consistency across distributed enterprise environments.",
+        description: "Design of reusable infrastructure foundations for distributed systems, focusing on observability, deployment portability, and operational consistency across enterprise environments.",
         items: [
-            "Infrastructure abstraction across MinIO, AWS S3, and Azure Blob Storage",
-            "Automated messaging resource provisioning and queue orchestration",
-            "Service discovery, ingress management, and distributed configuration using Consul and Traefik",
-            "Monitoring and observability using Prometheus and Grafana",
-            "Hybrid cloud deployment using Azure Container Apps and on-premise orchestration",
-            "Infrastructure as Code (IaC) principles and operational standardization"
+            "Infrastructure abstraction across MinIO, AWS S3, and Azure Blob Storage for portable deployments",
+            "Automated messaging provisioning and queue orchestration across multiple messaging providers",
+            "Service discovery, ingress routing, and distributed configuration using Consul and modern orchestration tools",
+            "Observability and monitoring using Prometheus, Grafana, and structured logging pipelines",
+            "Hybrid cloud deployments using Azure Container Apps and on-premise Kubernetes-style environments",
+            "Infrastructure as Code (IaC) principles applied to enterprise-scale system standardization"
         ]
     }
 ];
@@ -111,31 +113,31 @@ export const experience = [
         role: "Lead Developer",
         company: "FPOSI",
         period: "2023 - Present",
-        description: "Leading development for LGU-facing systems, including document processing and data workflows deployed in environments with strict on-premise constraints and limited external dependencies. Currently involved in incremental migration of core services to Spring Boot 4 while maintaining compatibility with existing production systems still in active use."
+        description: "Leading development of enterprise systems for LGU and government-facing platforms, including document processing and workflow automation systems deployed in on-premise and restricted infrastructure environments. Currently involved in incremental modernization toward Spring Boot 4 while maintaining backward compatibility with production-critical legacy systems."
     },
     {
         role: "Lead Developer",
         company: "IDCSI",
         period: "2018 - 2023",
-        description: "Managed multiple enterprise systems deployed across government and private clients, often requiring integration with older desktop applications and inconsistent infrastructure environments. Focused on maintaining system uptime while gradually introducing service-oriented architecture patterns."
+        description: "Led multiple enterprise system implementations across government and private sector clients, often requiring integration with legacy desktop systems and heterogeneous infrastructure environments. Focused on system stability, operational continuity, and gradual migration toward service-oriented architectures."
     },
     {
         role: "Senior Developer",
         company: "IDCSI",
         period: "2011 - 2018",
-        description: "Worked on core enterprise modules including database-heavy systems and reporting tools. Much of the work involved maintaining and optimizing systems that had already been in production for years, with emphasis on stability and performance under increasing data loads."
+        description: "Developed core enterprise modules including data-heavy operational systems, reporting engines, and backend services. Focused on system reliability, performance optimization, and maintaining long-lived production systems under increasing data and user load."
     },
     {
         role: "Programming Instructor",
         company: "Flora Ylagan High School",
         period: "2015 - 2016",
-        description: "Designed curriculum for Computer Science students, focusing on algorithmic logic and database design using C and MySQL."
+        description: "Designed and delivered programming curriculum focused on algorithmic thinking, database design, and software fundamentals using C and MySQL."
     },
     {
         role: "Programmer",
         company: "Leyte Provincial Capitol",
         period: "2010 - 2011",
-        description: "Developed backend logic for provincial payroll and records systems, marking the start of a decade-plus career in government tech modernization."
+        description: "Developed backend systems for provincial payroll and records management, marking the beginning of long-term work in government digital modernization systems."
     }
 ];
 
@@ -145,17 +147,17 @@ export const projects = [
         year: "2026",
         generation: "Gen 4",
         categories: ["Mobile", "AI & ML", "Live"],
-        description: "An offline-first personal finance platform designed around privacy, local ownership of data, and operational independence from cloud infrastructure. Built as a mobile-first system where financial computation, budgeting logic, and asset tracking remain fully functional without continuous internet access.",
+        description: "An offline-first personal finance platform designed around local data ownership, privacy, and operational independence from cloud dependencies. Built as a mobile-first financial execution system where budgeting, computation, and asset tracking continue to function fully without internet connectivity.",
         roles: "Product Owner & Engineer",
         teamSize: "Solo Project",
         deployment: "Production (Google Play Store)",
         stack: "React Native, Expo, SQLite, Google Gemini API",
         keyPoints: [
-            "Designed an offline-first architecture where all financial records, computations, and visualizations remain available without external services.",
-            "Implemented rolling expenditure analysis instead of static category budgeting to better model real-world spending behavior over time.",
-            "Built a unified local ledger capable of consolidating savings, stock portfolios, crypto assets, and recurring transactions.",
-            "Integrated optional AI-assisted document extraction for receipts while preserving local-first processing for sensitive financial information.",
-            "Designed behavioral visualization layers focused on spending trends, recurring patterns, and long-term financial habits rather than static summaries."
+            "Designed an offline-first financial architecture where all records, computations, and analytics remain fully available without external services.",
+            "Implemented rolling financial behavior analysis instead of static category budgeting to better reflect real-world spending patterns over time.",
+            "Built a unified local ledger capable of consolidating cash flow, investments, crypto assets, and recurring financial events.",
+            "Integrated optional AI-assisted document extraction for receipts while maintaining full local-first control over sensitive financial data.",
+            "Designed behavioral visualization layers focused on long-term financial patterns, trends, and habit evolution rather than static reporting."
         ]
     },
     {
@@ -163,17 +165,17 @@ export const projects = [
         year: "2026",
         generation: "Gen 4",
         categories: ["Mobile", "AI & ML", "Experimental"],
-        description: "An offline-first research-oriented journaling system exploring longitudinal semantic analysis using local embeddings and lightweight machine learning techniques. Designed to investigate privacy-preserving sentiment exploration without dependence on cloud-based AI services.",
+        description: "An offline-first cognitive journaling system designed to explore long-term semantic analysis using local embeddings and lightweight machine learning models. Built as a privacy-preserving system for studying personal narrative evolution without reliance on cloud-based AI services.",
         roles: "Solo Developer / Researcher",
         teamSize: "Solo Project",
         deployment: "Local-Only",
         stack: "Kotlin, SQLite, TensorFlow Lite, Vector Embeddings",
         keyPoints: [
-            "Transforms journal entries into local vector embeddings for long-term semantic comparison and trend exploration.",
-            "Implemented lightweight obfuscation and noise injection strategies to reduce direct reversibility of stored embeddings.",
-            "Tracks semantic drift and writing-pattern evolution through similarity analysis and temporal clustering.",
-            "Explores local-only AI processing using TensorFlow Lite and embedded vector systems without external inference dependencies.",
-            "Designed as an intentionally constrained system prioritizing privacy, offline operation, and local ownership of behavioral data."
+            "Transforms journal entries into local vector embeddings for long-term semantic comparison and behavioral pattern discovery.",
+            "Implemented lightweight obfuscation strategies to reduce direct reversibility of stored semantic embeddings.",
+            "Tracks semantic drift and narrative evolution using similarity scoring and temporal clustering techniques.",
+            "Explores fully local AI processing pipelines using TensorFlow Lite and embedded vector systems without external inference dependencies.",
+            "Designed as a constrained system focused on privacy, offline capability, and long-term cognitive pattern analysis."
         ]
     },
     {
@@ -181,20 +183,20 @@ export const projects = [
         year: "2026",
         generation: "Gen 4",
         categories: ["Enterprise", "AI & ML", "Backend", "Web"],
-        description: "A modular document processing platform designed for controlled enterprise deployments where workflows must coexist with existing operational procedures, legacy systems, and constrained infrastructure environments. Built around asynchronous orchestration, configurable extraction pipelines, and progressive modernization principles.",
+        description: "A modular enterprise document intelligence platform designed for controlled environments where workflows must integrate with legacy systems, operational constraints, and on-premise infrastructure. Built around asynchronous orchestration, configurable extraction pipelines, and schema-driven document intelligence execution.",
         roles: "Architect & Lead Full Stack Developer",
         teamSize: "4 members",
         deployment: "Enterprise On-Premise",
         stack: "Java (Spring Boot), React, RabbitMQ, PostgreSQL, GraalVM",
         keyPoints: [
-            "Architected the overall platform structure including service boundaries, workflow orchestration, authentication integration, and infrastructure abstractions.",
-            "Designed asynchronous document pipelines using RabbitMQ to isolate extraction stages and prevent processing bottlenecks from cascading across dependent services.",
-            "Implemented configurable extraction workflows capable of switching between internal OCR engines, GPT-based extraction, and Gemini-based processing without application-level rewrites.",
-            "Designed runtime schema generation to dynamically align extracted document structures with downstream enterprise contracts and workflows.",
-            "Built transformation hooks using embedded JavaScript execution to normalize inconsistent vendor-specific document layouts and legacy formats.",
-            "Integrated Human-in-the-Loop (HITL) validation workflows for low-confidence extraction scenarios requiring operational review.",
-            "Introduced reusable platform SDK integrations to standardize logging, security, storage access, and inter-service communication across the ecosystem.",
-            "Modernized legacy document workflows incrementally without requiring full replacement of actively used production systems."
+            "Architected the full platform structure including service boundaries, workflow orchestration, IAM integration, and infrastructure abstraction layers.",
+            "Designed asynchronous document pipelines using RabbitMQ to isolate extraction stages and prevent system-wide processing bottlenecks.",
+            "Implemented configurable extraction workflows capable of switching between OCR engines, GPT-based extraction, and Gemini-based processing without system rewrites.",
+            "Designed runtime schema generation to dynamically align extracted document structures with downstream enterprise workflows and contracts.",
+            "Built transformation hooks using embedded JavaScript execution for normalization of vendor-specific and legacy document formats.",
+            "Integrated Human-in-the-Loop (HITL) validation workflows for low-confidence extraction scenarios requiring manual review.",
+            "Developed reusable platform SDK integrations for logging, security, storage, and service-to-service communication standardization.",
+            "Modernized legacy document workflows incrementally without requiring full system replacement."
         ]
     },
     {
@@ -202,18 +204,18 @@ export const projects = [
         year: "2025",
         generation: "Gen 3",
         categories: ["Infrastructure", "Backend", "Enterprise"],
-        description: "A convention-driven enterprise SDK designed to standardize infrastructure behavior, reduce operational inconsistency, and simplify distributed service development across hybrid enterprise environments.",
+        description: "A reusable enterprise platform SDK designed to standardize infrastructure behavior and reduce operational complexity across distributed systems in hybrid enterprise environments.",
         roles: "Architect & Platform Engineer",
         teamSize: "Solo Project",
         stack: "Java (Spring Boot), Maven, RabbitMQ, AWS, Azure, MinIO",
         keyPoints: [
-            "Designed a pluggable infrastructure abstraction layer supporting interchangeable storage providers including AWS S3, Azure Blob Storage, and MinIO.",
-            "Implemented a declarative messaging framework capable of automatically provisioning queues, bindings, dead-letter policies, and delayed exchanges across multiple messaging providers.",
-            "Built unified messaging abstractions supporting RabbitMQ, AWS SQS, and Azure Service Bus through provider-independent service contracts.",
-            "Developed reusable Spring Boot starters standardizing OAuth 2.1/OIDC security, distributed rate limiting, validation, and exception handling across services.",
-            "Engineered dynamic RoutingDataSource capabilities enabling runtime multi-tenant database resolution and flexible deployment architectures.",
-            "Introduced Backend-for-Frontend (BFF) support patterns to decouple frontend requirements from core domain services.",
-            "Focused heavily on operational consistency, infrastructure portability, and reduction of duplicated cross-service engineering effort."
+            "Designed a pluggable storage abstraction layer supporting AWS S3, Azure Blob Storage, and MinIO interchangeably.",
+            "Implemented a declarative messaging framework capable of provisioning queues, bindings, and retry policies across multiple providers.",
+            "Built unified messaging contracts supporting RabbitMQ, AWS SQS, and Azure Service Bus.",
+            "Developed reusable Spring Boot starters standardizing OAuth 2.1/OIDC, validation, logging, and exception handling across services.",
+            "Engineered dynamic routing data source capabilities enabling runtime multi-tenant database resolution.",
+            "Introduced Backend-for-Frontend (BFF) patterns to decouple frontend requirements from backend domain services.",
+            "Focused on eliminating duplicated infrastructure logic across enterprise systems through reusable platform abstractions."
         ]
     },
     {
@@ -221,17 +223,17 @@ export const projects = [
         year: "2025",
         generation: "Gen 3",
         categories: ["Security", "Backend", "Enterprise"],
-        description: "A centralized identity and access management platform designed to unify authentication, authorization, and service-to-service security across distributed enterprise systems.",
+        description: "A centralized identity and access management platform designed to unify authentication, authorization, and service-level security across distributed enterprise systems.",
         roles: "Lead Full Stack Developer",
         teamSize: "Solo Project",
         deployment: "Clustered High-Availability Environment",
         stack: "Java (Spring Boot), OAuth 2.1, OIDC, Redis, MySQL",
         keyPoints: [
-            "Built a centralized OAuth 2.1 and OIDC-compliant identity provider supporting both user-facing and machine-to-machine authentication flows.",
-            "Implemented automated cluster-safe signing key rotation to support continuous secure operation without service downtime.",
-            "Designed distributed session management and token orchestration using Redis to support horizontally scaled deployments.",
-            "Integrated RBAC and service-level authorization models for distributed microservice communication.",
-            "Served as the unified security gateway for modernized enterprise workflows and asynchronous service ecosystems."
+            "Built a centralized OAuth 2.1 and OpenID Connect identity provider supporting both user authentication and machine-to-machine authorization.",
+            "Implemented cluster-safe key rotation enabling continuous operation without downtime.",
+            "Designed distributed session and token management using Redis for horizontally scalable deployments.",
+            "Integrated service-level RBAC and permission projection for microservice authorization control.",
+            "Served as the core security foundation for enterprise platform and IDP ecosystems."
         ]
     },
     {
@@ -239,16 +241,16 @@ export const projects = [
         year: "2024",
         generation: "Gen 3",
         categories: ["AI & ML", "Experimental"],
-        description: "An end-to-end machine learning experimentation pipeline focused on reproducible image classification workflows, automated evaluation, and deployment-ready model generation.",
+        description: "An end-to-end machine learning pipeline for reproducible image classification workflows, automated evaluation, and production-ready model generation.",
         roles: "Lead AI Developer",
         teamSize: "Solo Project",
         deployment: "Local / Cloud",
         stack: "Python, TensorFlow Lite, Keras, Pandas, Scikit-learn",
         keyPoints: [
-            "Designed automated preprocessing and augmentation workflows capable of handling large-scale image datasets.",
-            "Implemented transfer-learning pipelines using EfficientNetV2 with configurable classification architectures.",
-            "Integrated advanced training strategies including gradual unfreezing and cosine decay learning-rate scheduling.",
-            "Built automated reporting pipelines generating confusion matrices, evaluation summaries, and training dashboards."
+            "Built automated preprocessing and augmentation pipelines for large-scale image datasets.",
+            "Implemented transfer learning using EfficientNetV2 with configurable classification architectures.",
+            "Designed training strategies including gradual unfreezing and cosine learning rate scheduling.",
+            "Automated model evaluation reporting including confusion matrices and performance dashboards."
         ]
     },
     {
@@ -256,16 +258,16 @@ export const projects = [
         year: "2023",
         generation: "Gen 2",
         categories: ["Government", "Backend", "Mobile", "Web"],
-        description: "Distributed LGU-oriented property tax management platform designed to support valuation, assessment, billing, and synchronization workflows across geographically distributed deployments.",
+        description: "A distributed LGU-oriented property tax platform supporting valuation, assessment, billing, and synchronization across geographically distributed government deployments.",
         roles: "Lead Full Stack Developer",
         teamSize: "3 members",
         deployment: "Standalone / Distributed LGU Deployments",
         stack: "Java (Servlet, JSP), Kotlin (Android), MySQL",
         keyPoints: [
-            "Designed backend workflows for appraisals, tax declarations, and payment assessment management.",
-            "Implemented synchronization workflows between municipal deployments and centralized provincial repositories.",
-            "Built Android-based field validation tools for mobile property inspection and declaration capture.",
-            "Designed around intermittent connectivity and independently operating LGU deployments."
+            "Designed backend workflows for appraisal, tax declaration, and payment processing systems.",
+            "Implemented synchronization between municipal deployments and centralized provincial systems.",
+            "Built Android field tools for property inspection and data capture in offline environments.",
+            "Architected system for intermittent connectivity and independent LGU operation."
         ]
     },
     {
@@ -277,7 +279,7 @@ export const projects = [
         roles: "Lead Full Stack Developer",
         teamSize: "2 members",
         deployment: "Standalone / Distributed LGU Deployments",
-        stack: "Java, VB.NET, MySQL, jQuery, Bootstrap",
+        stack: "Java, VB.NET, MySQL, jQuery",
         keyPoints: [
             "Developed end-to-end permit lifecycle workflows covering application, validation, issuance, and renewals.",
             "Integrated online payment systems including LandBank and UnionBank transaction workflows.",
@@ -311,7 +313,7 @@ export const projects = [
         roles: "Lead Full Stack Developer",
         teamSize: "Solo Project",
         deployment: "Enterprise Self-Hosted",
-        stack: "Java, VB.NET, MySQL, jQuery",
+        stack: "Java, VB.NET, MySQL",
         keyPoints: [
             "Architected a full-stack platform for monitoring and managing remote employee activities.",
             "Developed a lightweight VB.NET desktop agent to capture metrics and securely transmit data.",
@@ -327,7 +329,7 @@ export const projects = [
         roles: "Lead Full Stack Developer",
         teamSize: "2 members",
         deployment: "Standalone, Distributed per LGU",
-        stack: "Java, VB.NET, MySQL, jQuery",
+        stack: "Java, VB.NET, MySQL",
         keyPoints: [
             "Developed a dual-purpose system managing both digital assets and physical storage locations.",
             "Built a web interface with advanced search, version control, and lifecycle tracking.",
@@ -357,46 +359,46 @@ const evolutionBase = [
         generation: "Gen 0",
         title: "Foundation Systems",
         period: "2010-2015",
-        description: "Database-centric application development under constrained government and enterprise environments. This is the “systems literacy” phase — learning how data, constraints, and production workflows actually behave.",
-        impact: "Learned production data behavior",
+        description: "Early-stage enterprise development focused on database-centric systems in constrained government environments. This phase established core understanding of production data behavior, system limitations, and operational constraints.",
+        impact: "Learned real-world production system behavior under constraints",
         projects: [
             "Early payroll systems",
             "Records systems",
             "CRUD-heavy applications",
             "Reporting tools",
-            "SQL-centric backend work"
+            "SQL-centric backend systems"
         ]
     },
     {
         generation: "Gen 1",
         title: "Workflow Systems",
         period: "",
-        description: "Moving from basic data storage to stateful workflows and tracking systems—learning how to model complex operational processes before scaling them into full enterprise systems.",
-        impact: "Learned workflow modeling",
+        description: "Transition from static data systems to stateful workflow-driven applications, focusing on modeling real operational processes and system state transitions.",
+        impact: "Learned workflow modeling and state-driven system design",
         projects: []
     },
     {
         generation: "Gen 2",
         title: "Standalone Enterprise Systems",
         period: "",
-        description: "Building monolithic, self-contained Java Servlet applications to serve as the centralized operational backbone for local government units.",
-        impact: "Learned monolithic scaling and centralized system constraints",
+        description: "Development of self-contained enterprise applications deployed in government environments, focusing on operational reliability and monolithic system scalability.",
+        impact: "Learned monolithic system scaling and enterprise deployment constraints",
         projects: []
     },
     {
         generation: "Gen 3",
         title: "Platform & AI Systems",
         period: "",
-        description: "Transitioning to standardized abstractions, reusable internal SDKs, and introducing automated AI pipelines.",
-        impact: "Learned platform abstraction design",
+        description: "Shift toward reusable platform architecture, internal SDK development, and early integration of AI-driven workflows into enterprise systems.",
+        impact: "Learned platform abstraction and reusable infrastructure design",
         projects: []
     },
     {
         generation: "Gen 4",
         title: "AI-Native Architecture",
         period: "",
-        description: "Designing offline-first systems where generative AI and vectorized search are baked deeply into the core local capabilities.",
-        impact: "Learned AI as a system primitive",
+        description: "Design of systems where AI, embeddings, and structured execution models are embedded as core system primitives rather than external features.",
+        impact: "Learned AI-native system design and runtime-driven architectures",
         projects: []
     }
 ];
@@ -404,20 +406,16 @@ const evolutionBase = [
 export const evolution = evolutionBase.map(gen => {
     if (gen.generation === "Gen 0") return gen;
 
-    // Extract projects for this generation from the main projects array
     const genProjects = projects.filter(p => (p as any).generation === gen.generation);
     if (genProjects.length === 0) return gen;
 
-    // Sort projects from oldest to newest for the timeline display
     genProjects.sort((a, b) => Number(a.year) - Number(b.year));
 
-    // Calculate dynamic period (e.g., "2021-2023" or "2026")
     const years = genProjects.map(p => Number(p.year));
     const startYear = years[0];
     const endYear = years[years.length - 1];
     const period = startYear === endYear ? `${startYear}` : `${startYear}-${endYear}`;
 
-    // Format projects list
     const projectList = genProjects.map(p => `${p.title} (${p.year})`);
 
     return {
