@@ -14,9 +14,9 @@ export const personalInfo = {
 export const about = {
     heading: "Who Am I?",
     text: [
-        "I am a Lead Software Engineer with over 15 years of experience designing and modernizing enterprise systems operating in government and regulated environments, where legacy infrastructure, intermittent connectivity, deployment restrictions, and long-term maintainability directly shape architectural decisions.",
-        "My work focuses on progressive enterprise modernization through event-driven systems, reusable platform abstractions, and AI-enabled workflows that integrate into existing operational ecosystems without requiring disruptive full-system rewrites.",
-        "Much of my engineering work centers around building internal platforms and infrastructure layers — including authentication systems, messaging abstractions, storage orchestration, and standardized service SDKs — designed to reduce operational complexity and improve consistency across distributed systems and development teams."
+        "I am a Lead Software Engineer and systems architect with 15+ years of experience building and modernizing enterprise platforms in regulated and mission-critical environments, where reliability, security, and long-term scalability are non-negotiable.",
+        "My work focuses on designing and building backend platforms rather than isolated applications — including identity and access management (IAM), intelligent document processing (IDP) systems, and schema-driven execution runtimes that turn unstructured inputs into governed, structured outcomes.",
+        "I specialize in building platform scaffolds and infrastructure layers that other systems run on top of — identity, messaging, storage, and orchestration — with a strong emphasis on clear system boundaries, secure multi-tenant design, and deterministic runtime behavior."
     ]
 };
 
