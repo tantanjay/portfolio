@@ -191,7 +191,7 @@ export const projects = [
         keyPoints: [
             "Architected the full platform structure including service boundaries, workflow orchestration, IAM integration, and infrastructure abstraction layers.",
             "Designed asynchronous document pipelines using RabbitMQ to isolate extraction stages and prevent system-wide processing bottlenecks.",
-            "Implemented configurable extraction workflows capable of switching between OCR engines, GPT-based extraction, and Gemini-based processing without system rewrites.",
+            "Implemented configurable extraction workflows capable of switching between local VLM inference, GPT-based extraction, and Gemini-based processing per tenant without system rewrites.",
             "Designed runtime schema generation to dynamically align extracted document structures with downstream enterprise workflows and contracts.",
             "Built transformation hooks using embedded JavaScript execution for normalization of vendor-specific and legacy document formats.",
             "Integrated Human-in-the-Loop (HITL) validation workflows for low-confidence extraction scenarios requiring manual review.",
@@ -207,13 +207,15 @@ export const projects = [
         description: "A reusable enterprise platform SDK designed to standardize infrastructure behavior and reduce operational complexity across distributed systems in hybrid enterprise environments.",
         roles: "Architect & Platform Engineer",
         teamSize: "Solo Project",
-        stack: "Java (Spring Boot), Maven, RabbitMQ, AWS, Azure, MinIO",
+        stack: "Java (Spring Boot), Maven, RabbitMQ, AWS, Azure, MinIO, Redis, GraalVM",
         keyPoints: [
             "Designed a pluggable storage abstraction layer supporting AWS S3, Azure Blob Storage, and MinIO interchangeably.",
             "Implemented a declarative messaging framework capable of provisioning queues, bindings, and retry policies across multiple providers.",
             "Built unified messaging contracts supporting RabbitMQ, AWS SQS, and Azure Service Bus.",
             "Developed reusable Spring Boot starters standardizing OAuth 2.1/OIDC, validation, logging, and exception handling across services.",
-            "Engineered dynamic routing data source capabilities enabling runtime multi-tenant database resolution.",
+            "Built distributed rate limiting and failover caching on Redis with automatic local fallback, keeping services degraded-but-available if the cache layer drops.",
+            "Engineered shard-aware, multi-tenant database routing with per-tenant connection pooling and catalog-based tenant resolution, allowing new tenants to onboard as a configuration change rather than a redeploy.",
+            "Embedded a sandboxed GraalVM JavaScript execution engine as a reusable platform primitive for downstream services to run tenant-defined business logic safely.",
             "Introduced Backend-for-Frontend (BFF) patterns to decouple frontend requirements from backend domain services.",
             "Focused on eliminating duplicated infrastructure logic across enterprise systems through reusable platform abstractions."
         ]
