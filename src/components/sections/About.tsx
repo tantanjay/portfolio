@@ -21,7 +21,7 @@ export default function About() {
                             {about.heading}
                         </h2>
                         <div className="space-y-4 text-gray-600 leading-relaxed font-sans text-lg">
-                            {about.text.map((paragraph, idx) => (
+                            {about.text.map((paragraph: string, idx: number) => (
                                 <p key={idx}>{paragraph}</p>
                             ))}
                         </div>
