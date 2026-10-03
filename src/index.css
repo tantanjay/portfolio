@@ -1,9 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", sans-serif;
+  --font-serif: "Outfit", sans-serif;
+
+  --color-primary: #2c98f0;
+  --color-secondary: #f9bf3f;
+  --color-accent-blue: #2c98f0;
+  --color-accent-red: #ec5453;
+  --color-accent-yellow: #f9bf3f;
+  --color-accent-purple: #a84cb8;
+  --color-accent-teal: #2fa499;
+  --color-accent-pink: #ff6b97;
+  --color-accent-orange: #ff9a56;
+  --color-accent-green: #2fa499;
+  --color-sidebar: #f2f3f7;
+}
+
+/* Tailwind 4 changed these defaults; keep the v3 look. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 @layer base {
   body {

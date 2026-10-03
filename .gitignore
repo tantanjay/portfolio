@@ -25,3 +25,4 @@ legacy_portfolio
 *.sw?
 
 .tmp/
+.claude/launch.json

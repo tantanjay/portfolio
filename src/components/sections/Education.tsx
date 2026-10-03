@@ -42,7 +42,7 @@ export default function Education() {
                         >
                             <button
                                 onClick={() => toggle(index)}
-                                className={`w-full flex items-center justify-between p-6 text-left transition-colors duration-300 border border-gray-100 shadow-sm
+                                className={`w-full flex items-center justify-between p-6 text-left transition-colors duration-300 border border-gray-100 shadow-xs
                   ${openIndex === index ? 'bg-primary text-white' : 'bg-gray-50 text-gray-700 hover:bg-gray-100'}
                 `}
                             >
