@@ -27,62 +27,60 @@ export const services = [
         title: "Architecture & Leadership",
         subtitle: "(Core Competencies)",
         icon: Lightbulb,
-        description: "Enterprise system architecture and technical leadership focused on building scalable platforms for regulated environments, with emphasis on incremental modernization and production reliability.",
+        description: "Deciding how systems are split, secured, and evolved over years, and leading the people who build them. Most of my work is for government and regulated clients, where downtime isn't an option.",
         items: [
-            "Event-driven microservices architecture and bounded context decomposition for enterprise-scale systems",
-            "Design of internal platforms and SDKs that standardize infrastructure behavior across teams and services",
-            "Incremental modernization strategies for legacy systems without disrupting active production workloads",
-            "Security architecture using OAuth 2.1, OIDC, RBAC, and zero-trust communication models across distributed services"
+            "Event-driven microservices and internal SDKs that standardize infrastructure across services",
+            "Incremental modernization of legacy systems, and clean rebuilds when a monolith outgrows its design",
+            "Security architecture with OAuth 2.1, OIDC, RBAC, and per-client tenant isolation",
+            "Leading small teams, with documentation, runbooks, and incident write-ups as part of delivery"
         ]
     },
     {
         title: "Backend & Distributed Systems",
         subtitle: "(Expert Level)",
         icon: Database,
-        description: "Design and implementation of distributed backend systems with emphasis on scalability, resilience, and cross-environment interoperability across hybrid enterprise deployments.",
+        description: "The services behind the screens: Java APIs, message queues, and databases that keep working when traffic spikes or a dependency goes down.",
         items: [
-            "Java (Spring Boot, Spring AI, Hibernate, GraalVM runtime execution)",
-            "Messaging systems using RabbitMQ, asynchronous processing pipelines, and queue orchestration",
-            "PostgreSQL, MySQL, SQLite, Redis across enterprise, hybrid, and embedded deployments",
-            "Cross-platform interoperability with legacy enterprise systems (VB.NET, C#, Java)"
+            "Java 21 (Spring Boot, Spring AI, Hibernate, GraalVM)",
+            "Event-driven pipelines on RabbitMQ and Azure Service Bus with retries and dead-letter handling",
+            "PostgreSQL, MySQL, SQLite, and Redis, with read/write routing, sharding, and cache fallback",
+            "Interoperability with legacy enterprise systems (VB.NET, C#, Java)"
         ]
     },
     {
         title: "Applied AI & Product Systems",
-        subtitle: "(Production-Focused AI)",
+        subtitle: "(AI as a Component)",
         icon: Sparkle,
-        description: "Practical integration of AI systems into enterprise platforms, focusing on offline-first, privacy-preserving, and production-grade AI workflows.",
+        description: "Using AI as one part of a product, not the whole product: the code around the model controls what it returns, checks its answers, and keeps things working without it.",
         items: [
             "Model-agnostic AI orchestration supporting multiple providers and local inference pipelines",
-            "On-device ML using TensorFlow Lite, embeddings, and lightweight vector-based systems",
-            "Mobile system development using Kotlin (Android), React Native (Expo)",
-            "Frontend systems built with React, TypeScript, and Tailwind CSS for enterprise-grade interfaces"
+            "Model output constrained to typed schemas and verified against source evidence, alongside rules and human review",
+            "On-device ML using TensorFlow Lite, embeddings, and local vector search",
+            "Mobile, web, and desktop apps with Kotlin, React Native, React, and Tauri"
         ]
     },
     {
         title: "Systems Integration",
         subtitle: "(Enterprise Interoperability)",
         icon: Link,
-        description: "Integration layer design for enterprise systems operating under heterogeneous, legacy, and constrained infrastructure environments — including distributed and intermittently connected systems.",
+        description: "Connecting new systems to the ones organizations already depend on: legacy desktop tools, banks, identity providers, and offices with unreliable internet.",
         items: [
-            "Legacy system modernization through gradual service extraction and integration abstraction layers",
+            "Legacy modernization through gradual service extraction and integration layers",
             "Protocol mediation across REST APIs, file-based ingestion, and message-driven workflows",
-            "Distributed synchronization strategies for intermittently connected or offline-first enterprise deployments",
-            "Backend-for-Frontend (BFF) and integration gateway patterns for multi-client enterprise environments"
+            "Offline-first synchronization for intermittently connected deployments",
+            "Federated identity (Google, Entra ID, Okta), payment gateways, and BFF patterns"
         ]
     },
     {
         title: "Platform Engineering & DevOps",
         subtitle: "(Operational Infrastructure)",
         icon: Settings,
-        description: "Design of reusable infrastructure foundations for distributed systems, focusing on observability, deployment portability, and operational consistency across enterprise environments.",
+        description: "Building the shared foundation services run on, then deploying and operating them both on-premise and in the cloud.",
         items: [
-            "Infrastructure abstraction across MinIO, AWS S3, and Azure Blob Storage for portable deployments",
-            "Automated messaging provisioning and queue orchestration across multiple messaging providers",
-            "Service discovery, ingress routing, and distributed configuration using Consul and modern orchestration tools",
-            "Observability and monitoring using Prometheus, Grafana, and structured logging pipelines",
-            "Hybrid cloud deployments using Azure Container Apps and on-premise Kubernetes-style environments",
-            "Infrastructure as Code (IaC) principles applied to enterprise-scale system standardization"
+            "Internal SDKs that switch storage, messaging, and cache between on-premise and cloud by config",
+            "Azure infrastructure as code with Bicep and Container Apps",
+            "Load testing (k6) and autoscaling sized from real throughput",
+            "Audit logs, Prometheus metrics, and alerts; on-premise stacks with Vault, Consul, and Traefik"
         ]
     }
 ];
@@ -147,56 +145,82 @@ export const projects = [
         year: "2026",
         generation: "Gen 4",
         categories: ["Mobile", "AI & ML", "Live"],
-        description: "An offline-first personal finance platform designed around local data ownership, privacy, and operational independence from cloud dependencies. Built as a mobile-first financial execution system where budgeting, computation, and asset tracking continue to function fully without internet connectivity.",
+        description: "A personal finance app where everything lives on the phone: an encrypted SQLite database, no account, no server. It brings spending, investments, debt, and savings goals into one picture of financial health. AI features are optional and use the person's own Gemini API key. 29 releases shipped since January 2026 (now v1.19).",
         roles: "Product Owner & Engineer",
         teamSize: "Solo Project",
         deployment: "Production (Google Play Store)",
-        stack: "React Native, Expo, SQLite, Google Gemini API",
+        stack: "React Native (Expo), TypeScript, SQLite, AES-256, BigNumber.js, Google Gemini API",
         keyPoints: [
-            "Designed an offline-first financial architecture where all records, computations, and analytics remain fully available without external services.",
-            "Implemented rolling financial behavior analysis instead of static category budgeting to better reflect real-world spending patterns over time.",
-            "Built a unified local ledger capable of consolidating cash flow, investments, crypto assets, and recurring financial events.",
-            "Integrated optional AI-assisted document extraction for receipts while maintaining full local-first control over sensitive financial data.",
-            "Designed behavioral visualization layers focused on long-term financial patterns, trends, and habit evolution rather than static reporting."
+            "Offline-first by design: all records and calculations live in a local SQLite database, with sensitive fields encrypted (AES-256) and the key kept in the device's secure store.",
+            "All money math runs through BigNumber.js instead of JavaScript floats, so totals don't drift after years of transactions.",
+            "Safe-to-Spend and Runway are based on a rolling 90-day burn rate, upcoming bills, and required debt payments, rather than fixed category budgets.",
+            "One ledger for cash, stocks, funds, crypto, and debt: multi-currency holdings with realized and unrealized P/L, full amortization schedules, and savings goals recorded as transfers so cash is never counted twice.",
+            "Optional AI on the person's own Gemini key: receipt scanning, price and dividend lookup, and a chat grounded in a snapshot of their data. A consent screen lists exactly what each feature sends before it's used.",
+            "Plain-language monthly summaries computed entirely on the device (no AI calls), plus trend charts that show habits changing over time instead of static reports.",
+            "Device-to-device sync over local Wi-Fi by QR code, scheduled encrypted backups, and Excel export, all without a cloud service.",
+            "Stays responsive with thousands of encrypted records: decryption runs in background batches of 500 and the UI updates optimistically."
         ]
     },
     {
-        title: "Laniakea — Personal Sentiment Diary System",
+        title: "Laniakea — Private Semantic Journal",
         year: "2026",
         generation: "Gen 4",
         categories: ["Mobile", "AI & ML", "Experimental"],
-        description: "An offline-first cognitive journaling system designed to explore long-term semantic analysis using local embeddings and lightweight machine learning models. Built as a privacy-preserving system for studying personal narrative evolution without reliance on cloud-based AI services.",
+        description: "An Android journal that understands entries by meaning, entirely on the device. A sentence-embedding model running in TensorFlow Lite turns each entry into a vector, which powers meaning-based search, related-entry suggestions, automatic themes, and a 3D map of your writing. Nothing leaves the phone. It's a research prototype, and it deliberately reports on writing patterns instead of claiming to read emotions.",
         roles: "Solo Developer / Researcher",
         teamSize: "Solo Project",
         deployment: "Local-Only",
-        stack: "Kotlin, SQLite, TensorFlow Lite, Vector Embeddings",
+        stack: "Kotlin, Jetpack Compose, Room, ObjectBox (HNSW vector index), TensorFlow Lite, AES-256-GCM",
         keyPoints: [
-            "Transforms journal entries into local vector embeddings for long-term semantic comparison and behavioral pattern discovery.",
-            "Implemented lightweight obfuscation strategies to reduce direct reversibility of stored semantic embeddings.",
-            "Tracks semantic drift and narrative evolution using similarity scoring and temporal clustering techniques.",
-            "Explores fully local AI processing pipelines using TensorFlow Lite and embedded vector systems without external inference dependencies.",
-            "Designed as a constrained system focused on privacy, offline capability, and long-term cognitive pattern analysis."
+            "Runs a Universal Sentence Encoder–based model (768-dimension embeddings) on the device with TensorFlow Lite, and stores the vectors in ObjectBox with an HNSW index for fast semantic search.",
+            "Adds three obfuscation layers to stored vectors on top of encryption (small Laplace noise, rounding, and a per-user shuffle of dimensions) to make reversing them to text harder. They're documented as obfuscation, not formal differential privacy.",
+            "Journal text is encrypted with AES-256-GCM and only decrypted in memory; exported backups use password-derived keys (PBKDF2).",
+            "Tracks how writing changes over time: groups entries into themes without manual tags, finds similar past entries, and flags entries far from the average of your last 30.",
+            "Built a 3D constellation map on Jetpack Compose Canvas with a custom force-directed physics engine, three layouts, and depth culling to keep it smooth with large journals.",
+            "Keeps the analysis honest: quick check-ins are excluded from writing statistics, and I'm redesigning metrics whose labels read like psychological judgments so every one describes only the text."
         ]
     },
     {
-        title: "AI-Powered Document Processing Platform",
+        title: "AI-Powered Document Processing Platform (IDP v2)",
         year: "2026",
         generation: "Gen 4",
+        categories: ["Enterprise", "AI & ML", "Backend", "Web", "Desktop"],
+        description: "A platform that turns scanned business documents such as bills of lading and invoices into verified, structured data. This is the second version. The first version (2024–2025) was a single monolithic application where ingestion, extraction, and review all deployed and scaled together, so I rebuilt it on my own as four repositories: an ingestion service, an extraction service, a client portal, and the Azure infrastructure. All of them are built on my platform SDK.",
+        roles: "Architect & Sole Developer",
+        teamSize: "Solo (v2 rebuild)",
+        deployment: "Azure Container Apps (one environment per client)",
+        stack: "Java 21, Spring Boot 4, Spring AI, React 19, Tauri 2, RabbitMQ / Azure Service Bus, PostgreSQL, Redis, GraalJS, docTR, Bicep",
+        keyPoints: [
+            "Split the platform by job. The Inbound Service handles uploads, checking every file by its binary signature (Apache Tika) and splitting PDFs and multi-page TIFFs into 300 DPI page images; the Extract Service runs OCR, LLM extraction, and grounding; the Client Portal handles everything people touch; and the Infrastructure layer (Bicep) deploys it all to Azure.",
+            "The inbound and extract services are event-driven and scale horizontally: each replica just takes the next message off the queue, so adding capacity means adding replicas.",
+            "The Extract Service also has a synchronous API: send a document and get the structured result back in the same request. Systems outside IDP can use it for extraction without going through the full pipeline.",
+            "Built extraction as a fan-out: one event feeds separate OCR, LLM, and vision-model queues that scale independently, and Redis atomic counters wait for all three before normalization runs.",
+            "Document templates compile to Java 21 records at runtime (generated source, in-memory compiler, cached by schema hash), and Spring AI constrains the model's output to that type. A template change applies to the next document with no redeploy.",
+            "Every extracted value is checked against the OCR text and its position on the page. Values with weak or no OCR evidence get a hallucination score and go to review instead of passing through silently.",
+            "Per-client LLM routing across multiple cloud and self-hosted providers: priority and weighted entries, shared quota pools tracked in Redis, cooldowns on 429/503 errors, and automatic failover. Limits can be changed live from the portal.",
+            "Templates carry JavaScript event hooks (onNormalized, onEvaluated, onError, onCompared) that run in a locked-down GraalJS sandbox, with allow-listed HTTP calls and read access to the client's lookup database.",
+            "Kept the Client Portal as one monorepo on purpose, since I'm the only maintainer: a Spring Boot 4 API, a React 19 web portal (Template Builder, exceptions, dashboards, pipeline health), a Tauri 2 desktop app for high-volume verification, and a verification UI package shared by both.",
+            "Human-in-the-loop verification with document locking, sticky routing for answered queries, and accuracy scoring on verify. Sign-in goes through the central identity server, and access is scoped by permission, queue status, and document origin.",
+            "Load-tested end to end with 7,000 real documents over 15 minutes: zero failed uploads, about 466 documents per minute sustained (541 at peak) on 17 replicas, and a 16-second median from upload to extracted. Those numbers set the production replica counts and scaling thresholds."
+        ]
+    },
+    {
+        title: "AI Document Extraction Platform (IDP v1)",
+        year: "2024",
+        generation: "Gen 3",
         categories: ["Enterprise", "AI & ML", "Backend", "Web"],
-        description: "A modular enterprise document intelligence platform designed for controlled environments where workflows must integrate with legacy systems, operational constraints, and on-premise infrastructure. Built around asynchronous orchestration, configurable extraction pipelines, and schema-driven document intelligence execution.",
-        roles: "Architect & Lead Full Stack Developer",
+        description: "The first version of the document processing platform: one Spring Boot application that picked up scanned documents from client file servers, extracted their data with AI, and gave reviewers a verification tool and dashboard. It ran in production and proved the idea, but because everything deployed and scaled together, it became the reason for the v2 rebuild.",
+        roles: "Architect & Lead Developer",
         teamSize: "4 members",
         deployment: "Enterprise On-Premise",
-        stack: "Java (Spring Boot), React, RabbitMQ, PostgreSQL, GraalVM",
+        stack: "Java 21, Spring Boot 3, RabbitMQ, MySQL, Redis, React, Vault, Consul, Traefik",
         keyPoints: [
-            "Architected the full platform structure including service boundaries, workflow orchestration, IAM integration, and infrastructure abstraction layers.",
-            "Designed asynchronous document pipelines using RabbitMQ to isolate extraction stages and prevent system-wide processing bottlenecks.",
-            "Implemented configurable extraction workflows capable of switching between local VLM inference, GPT-based extraction, and Gemini-based processing per tenant without system rewrites.",
-            "Designed runtime schema generation to dynamically align extracted document structures with downstream enterprise workflows and contracts.",
-            "Built transformation hooks using embedded JavaScript execution for normalization of vendor-specific and legacy document formats.",
-            "Integrated Human-in-the-Loop (HITL) validation workflows for low-confidence extraction scenarios requiring manual review.",
-            "Developed reusable platform SDK integrations for logging, security, storage, and service-to-service communication standardization.",
-            "Modernized legacy document workflows incrementally without requiring full system replacement."
+            "Automated document pickup from client SFTP servers and network shares, feeding a RabbitMQ queue so AI extraction ran in the background without blocking users.",
+            "Client-specific validation and lookup scripts in JavaScript or SQL, so business rules could change without rebuilding or redeploying the application.",
+            "A verification tool for reviewers and a React dashboard for monitoring and analyzing extracted data.",
+            "Ran on-premise with Vault for secrets, Consul for service discovery, Traefik for routing, and Redis-backed scheduler locks so only one instance ran each job.",
+            "Security with JWT, SAML2 single sign-on, and one-time-password MFA.",
+            "Running it showed what had to change, especially scaling extraction separately from everything else, and those lessons became the design of v2."
         ]
     },
     {
@@ -204,20 +228,21 @@ export const projects = [
         year: "2025",
         generation: "Gen 3",
         categories: ["Infrastructure", "Backend", "Enterprise"],
-        description: "A reusable enterprise platform SDK designed to standardize infrastructure behavior and reduce operational complexity across distributed systems in hybrid enterprise environments.",
+        description: "The shared Java library my services are built on. It hides which environment a service runs in: the same code runs against MinIO, RabbitMQ, and local Redis on-premise, or Azure Blob, Service Bus, and Azure Cache in the cloud, selected by configuration. Every IDP service depends on it.",
         roles: "Architect & Platform Engineer",
         teamSize: "Solo Project",
-        stack: "Java (Spring Boot), Maven, RabbitMQ, AWS, Azure, MinIO, Redis, GraalVM",
+        stack: "Java 21, Spring Boot 4, Maven, RabbitMQ, Azure Service Bus, AWS SQS, MinIO, S3, Azure Blob, Redis, Bucket4j, Caffeine, GraalJS",
         keyPoints: [
-            "Designed a pluggable storage abstraction layer supporting AWS S3, Azure Blob Storage, and MinIO interchangeably.",
-            "Implemented a declarative messaging framework capable of provisioning queues, bindings, and retry policies across multiple providers.",
-            "Built unified messaging contracts supporting RabbitMQ, AWS SQS, and Azure Service Bus.",
-            "Developed reusable Spring Boot starters standardizing OAuth 2.1/OIDC, validation, logging, and exception handling across services.",
-            "Built distributed rate limiting and failover caching on Redis with automatic local fallback, keeping services degraded-but-available if the cache layer drops.",
-            "Engineered shard-aware, multi-tenant database routing with per-tenant connection pooling and catalog-based tenant resolution, allowing new tenants to onboard as a configuration change rather than a redeploy.",
-            "Embedded a sandboxed GraalVM JavaScript execution engine as a reusable platform primitive for downstream services to run tenant-defined business logic safely.",
-            "Introduced Backend-for-Frontend (BFF) patterns to decouple frontend requirements from backend domain services.",
-            "Focused on eliminating duplicated infrastructure logic across enterprise systems through reusable platform abstractions."
+            "One storage interface over MinIO, AWS S3, and Azure Blob Storage, each with its own Actuator health check.",
+            "Messaging resources (queues, topics, bindings, dead-letter queues) are declared in configuration and provisioned at startup, with listeners registered dynamically with retry settings.",
+            "One messaging API for RabbitMQ, Azure Service Bus, and AWS SQS/SNS. On Service Bus it replaces each subscription's catch-all rule with a routing-key filter, so fan-out and targeted routing behave exactly like a RabbitMQ topic exchange.",
+            "Shared OIDC/OAuth2 security setup: tokens are decoded into one authentication principal that every service reads the same way, with standard CORS, session, and error handling.",
+            "Distributed rate limiting (Bucket4j on Redis, per user and per endpoint) and a failover cache. Both drop to local Caffeine if Redis goes down, so services keep running in a degraded mode instead of failing.",
+            "Read/write routing to separate connection pools by transaction type, plus opt-in shard routing for one database per tenant. Tenants resolve from config or a catalog table, so adding one is a config change, not a redeploy.",
+            "A sandboxed GraalJS runner with its own thread pool and compiled-script cache, which IDP uses to run client-defined template scripts safely.",
+            "Backend-for-Frontend (BFF) session support, so browsers only hold a session cookie and the backend relays the actual token downstream.",
+            "Structured audit logging: a trace ID on every request, and one audit event for each state-changing request or denied/throttled read, with the affected resource named by an @AuditResource annotation.",
+            "Removes duplicated infrastructure code: the IDP ingestion, extraction, and portal services all build on it instead of each wiring their own."
         ]
     },
     {
@@ -229,13 +254,14 @@ export const projects = [
         roles: "Lead Full Stack Developer",
         teamSize: "Solo Project",
         deployment: "Clustered High-Availability Environment",
-        stack: "Java (Spring Boot), OAuth 2.1, OIDC, Redis, MySQL",
+        stack: "Java 21, Spring Boot, Spring Authorization Server, OAuth 2.1, OIDC, WebAuthn, Redis, MySQL",
         keyPoints: [
-            "Built a centralized OAuth 2.1 and OpenID Connect identity provider supporting both user authentication and machine-to-machine authorization.",
-            "Implemented cluster-safe key rotation enabling continuous operation without downtime.",
-            "Designed distributed session and token management using Redis for horizontally scalable deployments.",
-            "Integrated service-level RBAC and permission projection for microservice authorization control.",
-            "Served as the core security foundation for enterprise platform and IDP ecosystems."
+            "OAuth 2.1 and OpenID Connect provider built on Spring Authorization Server, covering both user sign-in and machine-to-machine clients.",
+            "Signing keys rotate every 30 days with no downtime: ShedLock ensures only one node rotates, and the JWKS endpoint publishes old and new keys together during the switch.",
+            "Sessions and tokens live in Redis so nodes scale horizontally. Access tokens last 15 minutes with ±2 minutes of jitter to spread refresh load, and refresh tokens rotate on every use.",
+            "Domain-based permissions (e.g. IDP_DOCUMENT_PROCESS) and tenant tags in the token; each service maps them to its own rules without calling back to the identity server.",
+            "Passkeys (WebAuthn), TOTP, and email OTP, step-up re-authentication for sensitive actions, and federated sign-in with Google, Entra ID, and Okta limited to allow-listed domains.",
+            "Serves as the single sign-in for the IDP platform and other internal systems."
         ]
     },
     {
@@ -361,8 +387,8 @@ const evolutionBase = [
         generation: "Gen 0",
         title: "Foundation Systems",
         period: "2010-2015",
-        description: "Early-stage enterprise development focused on database-centric systems in constrained government environments. This phase established core understanding of production data behavior, system limitations, and operational constraints.",
-        impact: "Learned real-world production system behavior under constraints",
+        description: "Payroll, records, and reporting systems for local government, mostly SQL and CRUD screens running on whatever hardware the office had. This is where I learned how real data and real users behave once a system goes live.",
+        impact: "Learned how production data really behaves",
         projects: [
             "Early payroll systems",
             "Records systems",
@@ -375,32 +401,32 @@ const evolutionBase = [
         generation: "Gen 1",
         title: "Workflow Systems",
         period: "",
-        description: "Transition from static data systems to stateful workflow-driven applications, focusing on modeling real operational processes and system state transitions.",
-        impact: "Learned workflow modeling and state-driven system design",
+        description: "Systems that follow a real process instead of just storing records: signing documents, scheduling vaccinations, tracking remote work. I learned to model the states something moves through and what is allowed at each step.",
+        impact: "Learned to model processes as states",
         projects: []
     },
     {
         generation: "Gen 2",
         title: "Standalone Enterprise Systems",
         period: "",
-        description: "Development of self-contained enterprise applications deployed in government environments, focusing on operational reliability and monolithic system scalability.",
-        impact: "Learned monolithic system scaling and enterprise deployment constraints",
+        description: "Complete systems for local government units (property tax, business permits, document tracking), installed separately in each municipality and often on poor connections. They had to keep working offline, sync later, and run alongside existing VB.NET desktop tools.",
+        impact: "Learned offline sync and coexisting with legacy systems",
         projects: []
     },
     {
         generation: "Gen 3",
         title: "Platform & AI Systems",
         period: "",
-        description: "Shift toward reusable platform architecture, internal SDK development, and early integration of AI-driven workflows into enterprise systems.",
-        impact: "Learned platform abstraction and reusable infrastructure design",
+        description: "Shift toward reusable platform architecture: instead of rebuilding the same infrastructure for every project, I built shared pieces like an identity server and a platform SDK. This is also when I built my first AI document-extraction platform. It worked, but it was one large monolith, and the cost of maintaining and scaling it is what pushed me to rebuild it.",
+        impact: "Learned what a monolithic v1 costs",
         projects: []
     },
     {
         generation: "Gen 4",
         title: "AI-Native Architecture",
         period: "",
-        description: "Design of systems where AI, embeddings, and structured execution models are embedded as core system primitives rather than external features.",
-        impact: "Learned AI-native system design and runtime-driven architectures",
+        description: "Systems where AI is designed in from the start, and its output is checked instead of trusted: IDP v2, rebuilt on my own with runtime-compiled schemas and OCR grounding, and two on-device apps, WealthSnap and Laniakea, where personal data never has to leave the phone.",
+        impact: "Learned to verify AI output instead of trusting it",
         projects: []
     }
 ];
