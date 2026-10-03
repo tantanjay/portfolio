@@ -14,11 +14,11 @@ export const personalInfo = {
 export const about = {
     heading: "Who Am I?",
     text: [
-        "I am a software engineer and platform architect with over 15 years of experience building and modernizing enterprise systems in government and regulated environments, where reliability, security, and long-term operational continuity are core constraints rather than optional concerns. On most projects, I also lead the technical side.",
-        
-        "My work focuses on designing and building backend platforms rather than isolated applications — including identity and access management (IAM), intelligent document processing (IDP) systems, and schema-driven execution runtimes that transform unstructured enterprise data into structured, governed workflows.",
-        
-        "I specialize in building reusable platform scaffolds and infrastructure layers that function as internal enterprise execution foundations — covering identity, messaging, storage, orchestration, and AI-enabled workflows — enabling faster development of domain-specific systems while maintaining strict consistency, scalability, and security across distributed environments."
+        "I'm a software engineer and platform architect with over 15 years of experience building and modernizing systems for government and regulated organizations, where projects move fast, so I've learned to pick tools that get things built quickly and keep running long after launch. Depending on the project, I work as the primary engineer, technical lead, or architect, often owning the backend and infrastructure decisions while coordinating the rest of the team.",
+
+        "Most of my work is backend platforms rather than standalone apps: identity and access management, document processing systems that turn scanned paperwork into verified, structured data, and the integrations that connect new systems to the ones organizations already run.",
+
+        "I also build the shared foundations other projects sit on, such as SDKs for storage, messaging, and security, so new systems start further along and behave the same way on-premise or in the cloud. On my own time, I build privacy-first mobile apps where personal data never has to leave the device."
     ]
 };
 
