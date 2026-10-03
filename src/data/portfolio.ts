@@ -172,7 +172,7 @@ export const projects = [
         deployment: "Local-Only",
         stack: "Kotlin, Jetpack Compose, Room, ObjectBox (HNSW vector index), TensorFlow Lite, AES-256-GCM",
         keyPoints: [
-            "Runs a Universal Sentence Encoder–based model (768-dimension embeddings) on the device with TensorFlow Lite, and stores the vectors in ObjectBox with an HNSW index for fast semantic search.",
+            "Runs Google's USE-CMLM sentence encoder (a BERT-base model, 768-dimension embeddings) on the device with TensorFlow Lite, and stores the vectors in ObjectBox with an HNSW index for fast semantic search.",
             "Adds three obfuscation layers to stored vectors on top of encryption (small Laplace noise, rounding, and a per-user shuffle of dimensions) to make reversing them to text harder. They're documented as obfuscation, not formal differential privacy.",
             "Journal text is encrypted with AES-256-GCM and only decrypted in memory; exported backups use password-derived keys (PBKDF2).",
             "Tracks how writing changes over time: groups entries into themes without manual tags, finds similar past entries, and flags entries far from the average of your last 30.",
