@@ -185,7 +185,7 @@ export const projects = [
         year: "2026",
         generation: "Gen 4",
         categories: ["Enterprise", "AI & ML", "Backend", "Web", "Desktop"],
-        description: "A platform that turns scanned business documents such as bills of lading and invoices into verified, structured data. This is the second version. The first version (2024–2025) was a single monolithic application where ingestion, extraction, and review all deployed and scaled together, so I rebuilt it on my own as four repositories: an ingestion service, an extraction service, a client portal, and the Azure infrastructure. All of them are built on my platform SDK.",
+        description: "A platform that turns scanned business documents such as bills of lading and invoices into verified, structured data. This is the second version. The first version (2024–2025) was a single monolithic application where ingestion, extraction, and review all deployed and scaled together, so I rebuilt it as four repositories: an ingestion service, an extraction service, a client portal, and the Azure infrastructure, all built on my platform SDK. v1 took a team of four; v2 does far more and I built it alone, using AI-assisted development and everything v1 taught me.",
         roles: "Architect & Sole Developer",
         teamSize: "Solo (v2 rebuild)",
         deployment: "Azure Container Apps (one environment per client)",
