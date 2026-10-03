@@ -2,7 +2,7 @@ import { Database, Lightbulb, Sparkle, Settings, Link } from 'lucide-react';
 
 export const personalInfo = {
     name: "Christian Jay Soyosa",
-    role: "Lead Software Engineer & Architect",
+    role: "Software Engineer & Architect",
     location: "Philippines",
     socials: {
         linkedin: "https://www.linkedin.com/in/christian-jay-soyosa-78a662239/",
@@ -14,7 +14,7 @@ export const personalInfo = {
 export const about = {
     heading: "Who Am I?",
     text: [
-        "I am a Lead Software Engineer and platform architect with over 15 years of experience building and modernizing enterprise systems in government and regulated environments, where reliability, security, and long-term operational continuity are core constraints rather than optional concerns.",
+        "I am a software engineer and platform architect with over 15 years of experience building and modernizing enterprise systems in government and regulated environments, where reliability, security, and long-term operational continuity are core constraints rather than optional concerns. On most projects, I also lead the technical side.",
         
         "My work focuses on designing and building backend platforms rather than isolated applications — including identity and access management (IAM), intelligent document processing (IDP) systems, and schema-driven execution runtimes that transform unstructured enterprise data into structured, governed workflows.",
         
@@ -108,19 +108,19 @@ export const education = [
 
 export const experience = [
     {
-        role: "Lead Developer",
+        role: "Programmer (Technical Lead)",
         company: "FPOSI",
         period: "2023 - Present",
         description: "Leading development of enterprise systems for LGU and government-facing platforms, including document processing and workflow automation systems deployed in on-premise and restricted infrastructure environments. Currently involved in incremental modernization toward Spring Boot 4 while maintaining backward compatibility with production-critical legacy systems."
     },
     {
-        role: "Lead Developer",
+        role: "Programmer (Technical Lead)",
         company: "IDCSI",
         period: "2018 - 2023",
         description: "Led multiple enterprise system implementations across government and private sector clients, often requiring integration with legacy desktop systems and heterogeneous infrastructure environments. Focused on system stability, operational continuity, and gradual migration toward service-oriented architectures."
     },
     {
-        role: "Senior Developer",
+        role: "Programmer (Senior Developer)",
         company: "IDCSI",
         period: "2011 - 2018",
         description: "Developed core enterprise modules including data-heavy operational systems, reporting engines, and backend services. Focused on system reliability, performance optimization, and maintaining long-lived production systems under increasing data and user load."
