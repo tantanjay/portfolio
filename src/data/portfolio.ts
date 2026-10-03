@@ -32,7 +32,7 @@ export const services = [
             "Event-driven microservices and internal SDKs that standardize infrastructure across services",
             "Incremental modernization of legacy systems, and clean rebuilds when a monolith outgrows its design",
             "Security architecture with OAuth 2.1, OIDC, RBAC, and per-client tenant isolation",
-            "Leading small teams, with documentation, runbooks, and incident write-ups as part of delivery"
+            "Leading small teams: splitting systems into modules, matching work to each developer's strengths, and handing off once the core is stable"
         ]
     },
     {
@@ -295,7 +295,23 @@ export const projects = [
             "Designed backend workflows for appraisal, tax declaration, and payment processing systems.",
             "Implemented synchronization between municipal deployments and centralized provincial systems.",
             "Built Android field tools for property inspection and data capture in offline environments.",
-            "Architected system for intermittent connectivity and independent LGU operation."
+            "Architected system for intermittent connectivity and independent LGU operation.",
+            "Led the team by splitting the system into modules: I built the backend services and business logic, and guided the developers who built the controllers and UIs."
+        ]
+    },
+    {
+        title: "Electronic Medical Records (EMR) System",
+        year: "2023",
+        generation: "Gen 2",
+        categories: ["Enterprise", "Backend", "Web"],
+        description: "An EMR system where I worked purely as technical lead: I designed the database and the core of the system, and three developers built it in the stack they knew best (PHP and React). I didn't write the application code. After the core was done, the team took over the hospital's ongoing requests and kept extending it.",
+        roles: "Technical Lead & Database Designer",
+        teamSize: "4 members (lead + 3 developers)",
+        stack: "PHP, React, SQL database design",
+        keyPoints: [
+            "Designed the database and core data model for patient records, the foundation the rest of the system was built on.",
+            "Let the developers choose the stack they were strongest in instead of imposing mine, then guided the build through design and direction without writing application code.",
+            "Handed the hospital's ongoing change requests to the team once the core was stable, and the core held up as they kept building new modules on it."
         ]
     },
     {
