@@ -98,7 +98,7 @@ export default function Work() {
                                 transition={{ duration: 0.4 }}
                                 className="group relative bg-white border border-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
                             >
-                                <div className="p-8 flex-grow flex flex-col">
+                                <div className="p-8 grow flex flex-col">
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-3 bg-gray-50 rounded-lg group-hover:bg-primary/10 transition-colors">
                                             <Folder size={28} className="text-gray-400 group-hover:text-primary transition-colors" />
@@ -117,7 +117,7 @@ export default function Work() {
                                             {project.title}
                                         </h3>
                                         {project.year && (
-                                            <span className="px-2 py-1 mt-1 bg-gray-50 text-gray-500 text-[10px] font-bold rounded border border-gray-100 shrink-0">
+                                            <span className="px-2 py-1 mt-1 bg-gray-50 text-gray-500 text-[10px] font-bold rounded-sm border border-gray-100 shrink-0">
                                                 {project.year}
                                             </span>
                                         )}
@@ -127,13 +127,13 @@ export default function Work() {
                                         {project.description}
                                     </p>
 
-                                    <div className="space-y-3 mb-6 flex-grow">
+                                    <div className="space-y-3 mb-6 grow">
                                         <div className="flex items-center gap-2 text-sm text-gray-500">
                                             <Layers size={16} className="text-primary/70" />
                                             <span className="font-semibold text-gray-700">Role:</span> {project.roles}
                                         </div>
                                         <div className="flex items-start gap-2 text-sm text-gray-500">
-                                            <Code2 size={16} className="text-primary/70 mt-1 flex-shrink-0" />
+                                            <Code2 size={16} className="text-primary/70 mt-1 shrink-0" />
                                             <span>
                                                 <span className="font-semibold text-gray-700">Stack:</span> {project.stack}
                                             </span>
@@ -165,7 +165,7 @@ export default function Work() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setSelectedProject(null)}
-                        className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
+                        className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-xs"
                     >
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
@@ -194,7 +194,7 @@ export default function Work() {
                                         {selectedProject.title}
                                     </h3>
                                     {selectedProject.year && (
-                                        <span className="px-3 py-1 bg-gray-50 text-gray-500 text-sm font-bold rounded border border-gray-100 shrink-0">
+                                        <span className="px-3 py-1 bg-gray-50 text-gray-500 text-sm font-bold rounded-sm border border-gray-100 shrink-0">
                                             {selectedProject.year}
                                         </span>
                                     )}

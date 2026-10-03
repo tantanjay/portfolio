@@ -45,7 +45,7 @@ export default function Experience() {
                                 <Briefcase size={18} />
                             </div>
 
-                            <div className="bg-white p-8 shadow-md rounded-sm relative group hover:-translate-y-1 transition-transform duration-300">
+                            <div className="bg-white p-8 shadow-md rounded-xs relative group hover:-translate-y-1 transition-transform duration-300">
                                 {/* Arrow */}
                                 <div className="absolute top-4 -left-3 w-0 h-0 border-t-[10px] border-t-transparent border-r-[12px] border-r-white border-b-[10px] border-b-transparent" />
 

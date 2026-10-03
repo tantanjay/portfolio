@@ -44,7 +44,7 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="max-w-2xl"
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold font-serif text-black mb-6 leading-tight">
+                    <h1 className="text-5xl md:text-7xl font-bold font-serif text-black mb-6 leading-none">
                         Hi! <br /> I'm {personalInfo.name.split(' ')[0]}
                     </h1>
                     <p className="text-xl md:text-2xl font-sans text-black/80 mb-8 border-b-2 border-primary inline-block pb-2">

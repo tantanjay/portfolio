@@ -105,7 +105,7 @@ export default function Services() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    className={`w-full xl:w-[calc(33.333%-21.33px)] flex-shrink-0 p-8 bg-white shadow-xl text-center rounded-sm border-b-4 ${colorClass.split(' ')[0]} snap-start hover:-translate-y-2 transition-transform duration-300`}
+                                    className={`w-full xl:w-[calc(33.333%-21.33px)] shrink-0 p-8 bg-white shadow-xl text-center rounded-xs border-b-4 ${colorClass.split(' ')[0]} snap-start hover:-translate-y-2 transition-transform duration-300`}
                                 >
                                     <div className={`mb-6 inline-block p-4 rounded-full bg-gray-50 group-hover:bg-gray-100 transition-colors ${colorClass.split(' ')[1]}`}>
                                         <Icon size={40} />

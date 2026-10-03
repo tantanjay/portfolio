@@ -30,7 +30,7 @@ export default function Contact() {
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ y: -5 }}
-                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-sm w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-blue-600 transition-all"
+                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-xs w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-blue-600 transition-all"
                     >
                         <div className="mb-4 text-gray-400 group-hover:text-blue-600 transition-colors">
                             <Linkedin size={40} />
@@ -44,7 +44,7 @@ export default function Contact() {
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ y: -5 }}
-                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-sm w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-yellow-500 transition-all"
+                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-xs w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-yellow-500 transition-all"
                     >
                         <div className="mb-4 text-gray-400 group-hover:text-yellow-500 transition-colors">
                             <Briefcase size={40} />
@@ -58,7 +58,7 @@ export default function Contact() {
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ y: -5 }}
-                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-sm w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-gray-500 transition-all"
+                        className="flex flex-col items-center justify-center p-10 bg-white shadow-lg rounded-xs w-full md:w-1/3 text-center group border-b-4 border-transparent hover:border-gray-500 transition-all"
                     >
                         <div className="mb-4 text-gray-400 group-hover:text-gray-900 transition-colors">
                             <GitBranch size={40} />

@@ -47,7 +47,7 @@ export default function Evolution() {
                                 className="relative pl-12 group"
                             >
                                 {/* Generation Bubble */}
-                                <div className="absolute -left-[25px] top-0 w-12 h-12 bg-white border-4 border-gray-100 rounded-full flex items-center justify-center text-gray-400 shadow-sm z-10 group-hover:border-primary group-hover:text-primary transition-all duration-300">
+                                <div className="absolute -left-[25px] top-0 w-12 h-12 bg-white border-4 border-gray-100 rounded-full flex items-center justify-center text-gray-400 shadow-xs z-10 group-hover:border-primary group-hover:text-primary transition-all duration-300">
                                     <Icon size={20} />
                                 </div>
 
@@ -86,7 +86,7 @@ export default function Evolution() {
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                             {item.projects.map((project, idx) => (
                                                 <li key={idx} className="flex items-start text-sm text-gray-700">
-                                                    <span className="mr-2 text-primary mt-1 opacity-60 flex-shrink-0">•</span>
+                                                    <span className="mr-2 text-primary mt-1 opacity-60 shrink-0">•</span>
                                                     <span>{project}</span>
                                                 </li>
                                             ))}
