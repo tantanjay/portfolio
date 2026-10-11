@@ -197,9 +197,11 @@ export const projects = [
             "Built extraction as a fan-out: one event feeds separate OCR, LLM, and vision-model queues that scale independently, and Redis atomic counters wait for all three before normalization runs.",
             "Document templates compile to Java 21 records at runtime (generated source, in-memory compiler, cached by schema hash), and Spring AI constrains the model's output to that type. A template change applies to the next document with no redeploy.",
             "Every extracted value is checked against the OCR text and its position on the page. Values with weak or no OCR evidence get a hallucination score and go to review instead of passing through silently.",
+            "Added an agent step for client business rules: rules are plain sentences stored as table rows, so adding one is a new row, not code. The model proposes edits with cited evidence, and code, not another model, decides what lands: each edit must target an allowed field, quote OCR text that contains the value and its label, and fit allowed values. Rejected edits get one targeted repair round, anything still failing is flagged for human review, and every rule's outcome and every edit, applied or not, is recorded and shown to reviewers.",
             "Per-client LLM routing across multiple cloud and self-hosted providers: priority and weighted entries, shared quota pools tracked in Redis, cooldowns on 429/503 errors, and automatic failover. Limits can be changed live from the portal.",
-            "Templates carry JavaScript event hooks (onNormalized, onEvaluated, onError, onCompared) that run in a locked-down GraalJS sandbox, with allow-listed HTTP calls and read access to the client's lookup database.",
+            "Templates carry JavaScript event hooks (onNormalized, onResolved, onEvaluated, onError, onCompared) that run in a locked-down GraalJS sandbox, with allow-listed HTTP calls and read access to the client's lookup database.",
             "Kept the Client Portal as one monorepo on purpose, since I'm the only maintainer: a Spring Boot 4 API, a React 19 web portal (Template Builder, exceptions, dashboards, pipeline health), a Tauri 2 desktop app for high-volume verification, and a verification UI package shared by both.",
+            "Built Code Assist, an assistant inside the Template Builder that writes and fixes template scripts and proposes field changes from a plain-language description. Code only arrives through tool calls: each script runs in the sandbox against a real sample document, with writes, HTTP calls, and model calls stubbed or replayed, and is re-tested before it's shown. Field changes arrive as a checklist the user applies to a draft, and nothing is saved until they save. Each turn is bounded by call, time, and test-failure budgets, streamed live, with token cost tracked per user.",
             "Human-in-the-loop verification with document locking, sticky routing for answered queries, and accuracy scoring on verify. Sign-in goes through the central identity server, and access is scoped by permission, queue status, and document origin.",
             "Load-tested end to end with 7,000 real documents over 15 minutes: zero failed uploads, about 466 documents per minute sustained (541 at peak) on 17 replicas, and a 16-second median from upload to extracted. Those numbers set the production replica counts and scaling thresholds."
         ]
@@ -441,7 +443,7 @@ const evolutionBase = [
         generation: "Gen 4",
         title: "AI-Native Architecture",
         period: "",
-        description: "Systems where AI is designed in from the start, and its output is checked instead of trusted: IDP v2, rebuilt on my own with runtime-compiled schemas and OCR grounding, and two on-device apps, WealthSnap and Laniakea, where personal data never has to leave the phone.",
+        description: "Systems where AI is designed in from the start, and its output is checked instead of trusted: IDP v2, rebuilt on my own with runtime-compiled schemas and OCR grounding, plus agents whose every action is a tool call that code checks before it lands, and two on-device apps, WealthSnap and Laniakea, where personal data never has to leave the phone.",
         impact: "Learned to verify AI output instead of trusting it",
         projects: []
     }
