@@ -141,10 +141,25 @@ export default function Work() {
                                         {/* Show basic info in card, detailed in modal */}
                                     </div>
 
-                                    <div className="mt-auto pt-6 border-t border-gray-100">
+                                    <div className="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between gap-4 flex-wrap">
+                                        {'links' in project && Array.isArray((project as any).links) && (
+                                            <div className="flex flex-wrap gap-3">
+                                                {((project as any).links as { label: string; url: string }[]).map((link, idx) => (
+                                                    <a
+                                                        key={idx}
+                                                        href={link.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-xs font-bold uppercase tracking-wider text-gray-500 hover:text-primary flex items-center gap-1 transition-colors"
+                                                    >
+                                                        {link.label} <ExternalLink size={12} />
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        )}
                                         <button
                                             onClick={() => setSelectedProject(project)}
-                                            className="text-primary text-sm font-bold uppercase tracking-widest hover:underline flex items-center gap-2"
+                                            className="ml-auto text-primary text-sm font-bold uppercase tracking-widest hover:underline flex items-center gap-2"
                                         >
                                             View Details <ExternalLink size={14} />
                                         </button>
@@ -202,6 +217,22 @@ export default function Work() {
                                 <p className="text-gray-600 mb-8 font-sans leading-relaxed text-lg">
                                     {selectedProject.description}
                                 </p>
+
+                                {'links' in selectedProject && Array.isArray((selectedProject as any).links) && (
+                                    <div className="flex flex-wrap gap-3 mb-6">
+                                        {((selectedProject as any).links as { label: string; url: string }[]).map((link, idx) => (
+                                            <a
+                                                key={idx}
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="px-4 py-2 bg-gray-900 text-white text-xs font-bold uppercase tracking-widest rounded-lg hover:bg-primary transition-colors flex items-center gap-2"
+                                            >
+                                                {link.label} <ExternalLink size={14} />
+                                            </a>
+                                        ))}
+                                    </div>
+                                )}
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 bg-gray-50 p-6 rounded-lg">
                                     <div className="flex items-start gap-3">

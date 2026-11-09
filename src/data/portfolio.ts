@@ -150,6 +150,10 @@ export const projects = [
         teamSize: "Solo Project",
         deployment: "Production (Google Play Store)",
         stack: "React Native (Expo), TypeScript, SQLite, AES-256, BigNumber.js, Google Gemini API",
+        links: [
+            { label: "GitHub", url: "https://github.com/tantanjay/wealthsnap" },
+            { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.christian.soyosa.WealthSnap" }
+        ],
         keyPoints: [
             "Offline-first by design: all records and calculations live in a local SQLite database, with sensitive fields encrypted (AES-256) and the key kept in the device's secure store.",
             "All money math runs through BigNumber.js instead of JavaScript floats, so totals don't drift after years of transactions.",
@@ -171,6 +175,9 @@ export const projects = [
         teamSize: "Solo Project",
         deployment: "Local-Only",
         stack: "Kotlin, Jetpack Compose, Room, ObjectBox (HNSW vector index), TensorFlow Lite, AES-256-GCM",
+        links: [
+            { label: "GitHub", url: "https://github.com/tantanjay/laniakea-mobile" }
+        ],
         keyPoints: [
             "Runs Google's USE-CMLM sentence encoder (a BERT-base model, 768-dimension embeddings) on the device with TensorFlow Lite, and stores the vectors in ObjectBox with an HNSW index for fast semantic search.",
             "Adds three obfuscation layers to stored vectors on top of encryption (small Laplace noise, rounding, and a per-user shuffle of dimensions) to make reversing them to text harder. They're documented as obfuscation, not formal differential privacy.",
@@ -178,6 +185,25 @@ export const projects = [
             "Tracks how writing changes over time: groups entries into themes without manual tags, finds similar past entries, and flags entries far from the average of your last 30.",
             "Built a 3D constellation map on Jetpack Compose Canvas with a custom force-directed physics engine, three layouts, and depth culling to keep it smooth with large journals.",
             "Keeps the analysis honest: quick check-ins are excluded from writing statistics, and I'm redesigning metrics whose labels read like psychological judgments so every one describes only the text."
+        ]
+    },
+    {
+        title: "Rise of Git — Ambient 3D Realm for Engineering Teams",
+        year: "2026",
+        generation: "Gen 4",
+        categories: ["Web", "Backend", "Experimental", "Live"],
+        description: "An ambient 3D world connected to our team's Git server that turns repositories, commits, pull requests, and code reviews into a shared medieval realm. I built it to make quiet day-to-day engineering work visible and fun for the department without feeling like a corporate productivity tracker. I don't come from a game or 3D graphics background—I designed the scoring rules, economy math, and SQLite sync engine, and directed an AI coding agent through structured rulebooks (CLAUDE.md and docs/) to build and optimize the Three.js visuals and Web Audio soundtrack.",
+        roles: "Creator & Systems Designer (AI-Assisted Build)",
+        teamSize: "Solo Project",
+        deployment: "Internal Team Server (Open-Sourced)",
+        stack: "TypeScript, React 19, Three.js (React Three Fiber), Node.js, Express, SQLite (WAL), Web Audio API",
+        keyPoints: [
+            "Scores meaningful work instead of raw commit counts: inspects git diffs to ignore whitespace, comments, lockfiles, build output, and pure reformats, with a logarithmic curve on changed lines and daily diminishing returns so commit spam doesn't help.",
+            "Rewards teamwork over working alone: merged pull requests and code reviews on teammates' PRs earn dedicated XP, and non-code engineering work (architecture docs, incident response, mentoring) can be logged as sealed deeds.",
+            "Built-in fairness math so one busy week can't monopolize the realm: harvest shares use a square-root weight with a hard 10% cap per kingdom, and castle levels use the square root of all building levels to reward maintaining many services over one monolith.",
+            "Two independent background clocks on a local SQLite (WAL) database: a 1-hour Git sync that indexes commits, diffs, and PRs using server-side credentials (zero tokens in the browser), and a 15-minute harvest tick that runs demographics, resource pools, and upkeep.",
+            "Headless simulation scripts (sim:balance, sim:population, sim:war) that run the real server combat and demographic math from the CLI to verify civilization matchups and progression curves without needing a database or UI.",
+            "Kept a large AI-built 3D codebase fast and maintainable by turning every visual bug or frame-rate drop we hit into written engineering rules (draw-call budgets, GPU instancing, shader NaN guards, and doc-to-code sync checks) in CLAUDE.md and docs/."
         ]
     },
     {
@@ -443,7 +469,7 @@ const evolutionBase = [
         generation: "Gen 4",
         title: "AI-Native Architecture",
         period: "",
-        description: "Systems where AI is designed in from the start, and its output is checked instead of trusted: IDP v2, rebuilt on my own with runtime-compiled schemas and OCR grounding, plus agents whose every action is a tool call that code checks before it lands, and two on-device apps, WealthSnap and Laniakea, where personal data never has to leave the phone.",
+        description: "Systems where AI is designed in from the start, and its output is checked instead of trusted: IDP v2, rebuilt on my own with runtime-compiled schemas and OCR grounding, plus agents whose every action is a tool call that code checks before it lands; Rise of Git, an ambient 3D realm for engineering teams built by steering an AI agent with structured rulebooks; and two on-device apps, WealthSnap and Laniakea, where personal data never has to leave the phone.",
         impact: "Learned to verify AI output instead of trusting it",
         projects: []
     }
