@@ -18,7 +18,7 @@ export const about = {
 
         "Most of my work is backend platforms rather than standalone apps: identity and access management, document processing systems that turn scanned paperwork into verified, structured data, and the integrations that connect new systems to the ones organizations already run.",
 
-        "I also build the shared foundations other projects sit on, such as SDKs for storage, messaging, and security, so new systems start further along and behave the same way on-premise or in the cloud. On my own time, I build privacy-first mobile apps where personal data never has to leave the device."
+        "I also build the shared foundations other projects sit on, such as SDKs for storage, messaging, and security, so new systems start further along and behave the same way on-premise or in the cloud. On my own time, I build privacy-first mobile apps and self-hosted tools where your data and source code never have to leave your own device or network."
     ]
 };
 
@@ -192,11 +192,14 @@ export const projects = [
         year: "2026",
         generation: "Gen 4",
         categories: ["Web", "Backend", "Experimental", "Live"],
-        description: "An ambient 3D world connected to our team's Git server that turns repositories, commits, pull requests, and code reviews into a shared medieval realm. I built it to make quiet day-to-day engineering work visible and fun for the department without feeling like a corporate productivity tracker. I don't come from a game or 3D graphics background—I designed the scoring rules, economy math, and SQLite sync engine, and directed an AI coding agent through structured rulebooks (CLAUDE.md and docs/) to build and optimize the Three.js visuals and Web Audio soundtrack.",
+        description: "A self-hosted, ambient 3D world connected to our team's Git server that turns repositories, commits, pull requests, and code reviews into a shared medieval realm. Like WealthSnap and Laniakea, it keeps everything local: it runs on a single embedded SQLite database inside our own network so repository history never goes to a third-party analytics cloud, and it makes day-to-day engineering work visible and fun without feeling like a corporate productivity tracker. I don't come from a game or 3D graphics background—I designed the scoring rules, economy math, and SQLite sync engine, and directed an AI coding agent through structured rulebooks (CLAUDE.md and docs/) to build and optimize the Three.js visuals and Web Audio soundtrack.",
         roles: "Creator & Systems Designer (AI-Assisted Build)",
         teamSize: "Solo Project",
         deployment: "Internal Team Server (Open-Sourced)",
         stack: "TypeScript, React 19, Three.js (React Three Fiber), Node.js, Express, SQLite (WAL), Web Audio API",
+        links: [
+            { label: "GitHub", url: "https://github.com/tantanjay/rise-of-git" }
+        ],
         keyPoints: [
             "Scores meaningful work instead of raw commit counts: inspects git diffs to ignore whitespace, comments, lockfiles, build output, and pure reformats, with a logarithmic curve on changed lines and daily diminishing returns so commit spam doesn't help.",
             "Rewards teamwork over working alone: merged pull requests and code reviews on teammates' PRs earn dedicated XP, and non-code engineering work (architecture docs, incident response, mentoring) can be logged as sealed deeds.",

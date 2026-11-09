@@ -48,7 +48,7 @@ export default function Hero() {
                         Hi! <br /> I'm {personalInfo.name.split(' ')[0]}
                     </h1>
                     <p className="text-xl md:text-2xl font-sans text-black/80 mb-8 border-b-2 border-primary inline-block pb-2">
-                        Software Engineer | Architect | Tech Enthusiast
+                        Software Engineer | Platform Architect | Technical Lead
                     </p>
                     <a
                         href={personalInfo.socials.jobstreet}

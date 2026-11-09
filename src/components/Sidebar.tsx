@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { personalInfo } from '../data/portfolio';
 import { Menu, X } from 'lucide-react';
 
@@ -6,10 +6,10 @@ const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'skills', label: 'Skills' },
-    { id: 'education', label: 'Education' },
     { id: 'experience', label: 'Experience' },
     { id: 'evolution', label: 'Evolution' },
     { id: 'work', label: 'Work' },
+    { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' },
 ];
 
@@ -18,6 +18,26 @@ export default function Sidebar() {
     const [activeSection, setActiveSection] = useState('home');
 
     const toggleMenu = () => setIsOpen(!isOpen);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY + window.innerHeight * 0.3;
+            let current = navItems[0].id;
+
+            for (const item of navItems) {
+                const element = document.getElementById(item.id);
+                if (element && element.offsetTop <= scrollPosition) {
+                    current = item.id;
+                }
+            }
+
+            setActiveSection(current);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
